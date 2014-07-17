@@ -1,0 +1,41 @@
+;; Object results-table/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "results-table/"
+  :tables (list 
+   (semanticdb-table "results-table.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Proponowane optymalne rozwiązanie" section (:members 
+              ( ("Przekroje" section nil nil [111 1449])
+                ("Dane proponowanego układu" section nil nil [1449 1915]))              ) nil [50 1915])
+            ("Parametry rozwiązania" section (:members 
+              ( ("Warunki brzegowe" section nil nil [1964 4062])
+                ("Warunki nośności" section (:members 
+                  ( ("Pręt: {{barId}}" section nil nil [4175 4513])
+                    ("Nośność przekroju na zginanie z uwzględnieniem redukcji przez ścinanie" section nil nil [4513 4925])
+                    ("Nośność przekroju na ścinanie" section nil nil [4925 5296])
+                    ("Nośność środnika w złożonym stanie naprężenia" section nil nil [5296 5683])
+                    ("Nośność przekroju na ściskanie/rozciąganie" section nil nil [5683 6067])
+                    ("Nośność przekroju na ściskanie/rozciąganie" section nil nil [6067 6451])
+                    ("Nośność przekroju na ściskanie/rozciąganie" section nil nil [6451 6853])
+                    ("Nośność elementu przy ściskaniu" section nil nil [6853 7242])
+                    ("Nośność elementu przy zginaniu" section nil nil [7242 7631])
+                    ("Nośność elementu przy ściskaniu ze zginaniem z uwzględnieniem wpływu ścinania" section nil nil [7631 8067])
+                    ("Nośność elementu przy ścinaniu" section nil nil [8067 8931]))                  ) nil [4062 8931])
+                ("Zmienne wymiarowania" section (:members 
+                  ( ("Pręt: {{barId}}" section nil nil [9058 9833])
+                    ("Moment bezwładności w kierunku osi x" section nil nil [9833 10608])
+                    ("Moment bezwładności w kierunku osi y" section nil nil [10608 11236])
+                    ("Wskaźnik wytrzymałości pasa górnego na kierunku x" section nil nil [11236 11797])
+                    ("Wskaźnik wytrzymałości pasa dolnego na kierunku x" section nil nil [11797 19452]))                  ) nil [8931 19452]))              ) nil [1915 19452]))          
+    :file "results-table.html"
+    :pointmax 19452
+    :fsize 19597
+    :lastmodtime '(21160 7491 437356 837000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!Documents!industria!gaad!old!webgl-gaad!public!gaad!views!calculations!results-table!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

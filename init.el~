@@ -1,0 +1,4 @@
+(require 'package)
+(load-file "./better-defaults/better-defaults.el")
+(require 'better-defaults)
+

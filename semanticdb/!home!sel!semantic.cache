@@ -1,0 +1,67 @@
+;; Object sel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sel/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("Helper.h" include nil nil [21 40])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [51 60])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [61 74]))                  
+                :type "int")
+                nil [42 134]))          
+    :file "main.cpp"
+    :pointmax 135
+    :fsize 134
+    :lastmodtime '(21446 10775 627269 731000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Helper.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("Helper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [17 24])
+                    ("test" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [36 42]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [27 43]))                  
+                :type "class")
+                nil [1 46]))          
+    :file "Helper.h"
+    :pointmax 47
+    :fsize 46
+    :lastmodtime '(21445 43747 504828 84000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Helper.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Helper.h" include nil nil [1 20])
+            ("iostream" include (:system-flag t) nil [21 40])
+            ("test" function
+               (:parent "Helper"
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [59 65]))                  
+                :type "int")
+                nil [42 119]))          
+    :file "Helper.cpp"
+    :pointmax 120
+    :fsize 119
+    :lastmodtime '(21445 43760 7655 764000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
