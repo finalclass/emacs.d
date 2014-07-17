@@ -1,11 +1,14 @@
+; Emacs
 (require 'package)
-
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
+(set-face-attribute 'default nil :height 130)
+(display-time-mode 1)
+(setq display-time-24hr-format t)
 
+; Packages
 (load-file "~/.emacs.d/better-defaults/better-defaults.el")
 (require 'better-defaults)
-
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
@@ -70,3 +73,13 @@
   kept-new-versions 6
   kept-old-versions 2
   version-control t)
+
+
+; JavaScript / JSON
+(add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
+(setq js2-missing-semi-one-line-override t)
+(setq-default js2-basic-offset 2)

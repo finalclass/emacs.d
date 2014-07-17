@@ -1,0 +1,70 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/bmp/" . "bmpcpp/")
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/" . "bmp/")
+ ("/home/sel/Dokumenty/gaad/" . "gaad_webgl/")
+ ("/home/sel/Dokumenty/kursjs/" . "04-funkcje-podstawy/")
+ ("/home/sel/Dokumenty/" . "gaad/")
+ ("/home/sel/" . "Dokumenty/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/sel/Dokumenty/udarowcy/ud.wpress.lo/"
+ "/home/sel/"
+ "/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/bmp/bmpcpp/"
+ "/home/sel/Dokumenty/tmp/projects/table/"
+ "/home/sel/Dokumenty/kursjs/05-zasieg-zmiennych/"
+ "/home/sel/Dokumenty/kursjs/04-funkcje-podstawy/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "wp-config.php"
+ ".emacs"
+ "index.js"
+ "Table.html"
+ "zasieg3.js"
+ "zasieg.c"
+ "zasieg2.js"
+ "func2.js"
+ "function.js"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/sel/Dokumenty/udarowcy/ud.wpress.lo/" (21175 1058) "sitemap.xml" "wp-blog-header.php" "sitemap.xml.gz" "wp-trackback.php" "wp-config.php" "../" "wp-cron.php" "wp-links-opml.php" "readme.html" "wp-config-sample.php" "udarowcy_pl.sql" "wp-load.php" "wp-content/" "wp-activate.php" "wp-admin/" "xmlrpc.php" "wp-login.php" "wp-includes/" "wp-settings.php" "wp-comments-post.php" "wp-signup.php" "index.php" "./" "wp-mail.php" "license.txt")
+
+ ("/home/sel/" (21144 18581) ".linuxmint/" "Pobrane/" ".gnupg/" "list.txt" ".drush/" ".netbeans/" ".Skype/" ".cache/" ".selected_editor" ".gtk-recordmydesktop" ".dmrc" ".disk-manager.conf" ".emacs.d/" ".pulse/" ".mission-control/" ".emacs~" ".gitconfig" ".cinnamon/" ".VirtualBox/" ".emacs" ".java/" "Obrazy/" ".emacs-places" ".bibletime/" ".gem/" ".face" "opt/" "./" "Wideo/" ".audacity-data/" ".xsession-errors" ".ICEauthority" ".adobe/" ".sword/" "Dokumenty/" ".forever/" "Insync/" "../" ".jackdrc" ".WebStorm7/" ".dbus/" "VirtualBox VMs/" ".gconf/" ".ardour2/" ".pulse-cookie" ".yafc/" ".bashrc.dpkg-dist" ".thunderbird/" "build/" ".ido.last~" "Dropbox/" ".fontconfig/" "tmp/" ".dropbox-dist/" ".esd_auth" ".Wakanda Server/" ".gtk-bookmarks" ".gksu.lock" ".nbi/" "Muzyka/" ".ssh/" ".gnome2_private/" "Pulpit/" ".sqlite_history" "package.el~" ".composer/" ".gvfs/" ".eshell/" ".thumbnails/" ".sourcemint/" ".lighttable/" ".aptitude/" ".lesshst" ".config/" ".mozilla/" ".koala/" ".nvidia-settings-rc" ".macromedia/" ".bash_logout" "Publiczny/" ".npm/" ".node-gyp/" ".gimp-2.8/" ".workspace-grid.prefs" ".local/" ".hplip/" ".gervill/" ".nv/" ".opera/" ".filezilla/" ".xchat2/" ".mate2/" ".WebIde60/" ".wine/" ".kde/" ".ido.last" ".pki/" ".sane/" ".gnome2/" ".npmrc" ".profile" ".PlayOnLinux/" ".mysql_history" ".gstreamer-0.10/" ".Xauthority" ".som/" ".dropbox/" ".bash_history")
+
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/bmp/bmpcpp/" (21143 21653) "binding.gyp" "v8utils.cpp" "LoadsCollection.h" "calculations/" "./" "System.cpp" "../" "SectionsCollection.h" "index.js" "System.h" "SectionsCollection.cpp" "main.cc" "build/" "node/" "v8utils.h" "bar/" "LoadsCollection.cpp")
+
+ ("/home/sel/Dokumenty/kursjs/04-funkcje-podstawy/" (20862 49593) "Renders/" "function.js" "./" "../" "po_obrobce.wav" "base_video.mp4.sfk" "po_obrobce.sfk" "04-funkcje-podstawy.vf" "base_video Take 2.wav" "base_video Take 2.sfk" "base_audio.WMA" "base_video.mp4" "func2.js")
+
+ ("/home/sel/Dokumenty/kursjs/05-zasieg-zmiennych/" (20866 24008) "zasieg2.js" "Renders/" "zasieg.c" "Nowy folder/" "zasieg.js" "./" "../" "po_obrobce.wav" "base_video.mp4.sfk" "po_obrobce.sfk" "zasieg3.js" "zasieg3.js~" "zasieg2.js~" "zasieg.c~" "zasieg.js~" "base_video Take 2.wav" "base_video Take 2.sfk" "base_audio.WMA" "05-zasieg-zmiennych.vf" "a.out" "base_video.mp4")
+
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/bmp/" (21143 4637) "prepareBars.js" "globalStiffnessMatrix.js" "supportMatrix.js" "sectionParameters.js" "bmpcpp/" "./" "allocationMatrix.js" "../" "internalForce.js" "displacementVector.js" "staticReduction.js" "index.js" "barsLengths.js" "kolejnosc.txt" "supportingReactions.js" "loadsVector.js" "transformationMatrix.js" "globalLoads.js" "assignOrdinalNumbers.js")
+
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/gaad/" (21141 46707) "bmp-old.js" "volumeOptimize.js" "spec/" "systemRestrictions.js" "bmpcpp/" "Invoker.js" "GaadData.js" "material.js" "./" "package.json" "../" "index.js" "test/" "dimensioning/" "algorithms/" "ibeam.js" "bmp/" "volume-ga/" "errors/" "vectorUtils.js" "README.md" "VolumeOptimizer_old.js" "utils/" "dimensioningForces/")
+
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/lib/" (21103 27228) "Router.js" "OptimalPro.js" "./" "FilesReader.js" "gaad/" "routes/" "../" "MasterNotifier.js" "slaves/" "ExpressApp.js")
+
+ ("/home/sel/Dokumenty/gaad/gaad_webgl/" (21139 7849) "var/" "vector_to_json.js" "testacular.conf.js" "tmpdata.txt" ".gitmodules" "spec/" "npm-debug.log" ".git/" "matrix_to_json.js" "./" "gaad_webgl.sublime-project" "package.json" "../" ".gitignore" "views/" "RELEASE.notes" "node_modules/" "HOWTO_enable_webgl.txt" "public/" "projectFilesBackup/" "gaad_webgl.sublime-workspace" "exampleInput.gaad" "lib/" ".idea/" "dane_wejsciowe.js" "in.txt" "results.md" "app.js" "startMany.js" "webapp.json" ".htpasswd")
+
+ ("/home/sel/Dokumenty/gaad/gaad-core/" (20844 17860) "tests/" "fc/" ".git/" ".dep.inc" "./" "pow2/" "../" "build/" "boost/" "Makefile" "dist/" "main.cpp" "nbproject/")
+
+ ("/home/sel/Dokumenty/gaad/" (21132 38879) "uml_ga/" "gaad_webgl-23-stycznia-2013.tar.gz" ".metadata/" "schowek.txt" "vector_to_json.js" "dim1.xmcd" "testacular.conf.js" "tests/" "2013.02.13_Wymiarowanie_Mcr_wg_ENV.xmcd" "metoda_przemieszczen_3d_cm.xmcd" "tmpdata.txt" "genetic_algorithm.dia" ".gitmodules" "oswiadczenie_przeszkolenie.jpg" "trzepak.gaad" "install.sh" "2013.04.3_Wymiarowanie_Mcr_wg_ENV.xmcd" "fc/" "oswiadczenie_oferta_60dni.jpg" "bartek.json" "matrix_to_json.js" "transza-1.ods" "gaad_webgl-10-mar-2013.zip" "./" "Przetarg/" "2013.11.06_BMP_2.xmcd" "optimal-pro/" "MFC98D1.tmp" "gaad/" "oswiadczenie_oferta60dni.jpg" "MFCF002.tmp" "install.sh~" "BMP_3_prety-jednostki.xmcd" "package.json" "pow2/" "../" "BMP_1-jednostki.xmcd" ".gitignore" "opro/" "optimal-pro-prezentacja.mp4" "views/" "RELEASE.notes" "node_modules/" "HOWTO_enable_webgl.txt" "gaad_webgl.tar.gz" "public/" "gaad-core.lo" "rama-blad-klasa-srodnika.xmcd" "DOKUMENTY/" "oswiadczenie_przeszkolenie2.jpg" "build/" "boost/" "tmp/" "kGlobalP.ods" "Procedura+notka.xmcd" "oswiadczenie_szkolenie.jpg" "Schody ewakuacyjne/" "case12.xmcd" "exampleInput.gaad" "lib/" "codelite_ws/" "js/" "EC/" "wykłady/" "Wymiarowanie - 2013.02.pdf" "Tekst 03.03.2010.docx" "MM/" "Makefile" "MES/" ".fxpTemp/" "optimal-pro.sh" "gaad_webgl/" "components_1/" "mechana/" "OLD2013.01.22_Wymiarowanie.xmcd" "dist/" "gaad_webgl_13-mar-2013.tar" "dane_wejsciowe.js" "BMP_3_prety.xmcd" "2013.03.29_Wymiarowanie_Mcr_wg_ENV.xmcd" "main.cpp" "bartek-kasa.ods" "Mathcad - 2013.02.pdf" "rama_poprawiona.json" "nbproject/" "app.js" "startMany.js" "webapp.json" "gaad-core/" ".htpasswd")
+
+ ("/home/sel/Dokumenty/" (21143 3202) "jade/" "fdi-project/" "inside/" "dowod_osobisty.png" "scans/" "bible-map/" "udarowcy/" "gaz/" "multi-przedszkole/" "industria-website/" "switch/" "FirefoxPortable/" "sockets/" "final-node-example/" "mtm/" "potential/" "podstawy/" "kursjs/" "./" "gaad/" "../" "stroj-proj/" "pedag/" "finaldb/" "node_modules/" "fasolka/" "aa/" "tmp/" "final-node/" "v8 multiply number - Google Search_files/" "cienie/" "blog-stream (kopia)/" "motim/" "fstudio/" "topcube1/" "marknow/" "blog-stream/" "web-components/" "klo/" "angular-dragdrop/" "fathers-village/" "mega-object/")
+
+ ("/home/sel/Dokumenty/tmp/projects/table/" (20903 4379) "Table.js" "./" "../" "Table.html" "Table.styl")
+
+ ("/etc/" (20862 31969) "X11/" "gconf/" "default/" "iproute2/" "python3.2/" "deluser.conf" "mtab" "cron.monthly/" "pkcs11/" "mailcap.order" "pango/" "ssh/" "avahi/" "at.deny" "rc1.d/" "vim/" "shadow" "sysctl.d/" "live/" "rmt" "pm/" "wpa_supplicant/" "rc2.d/" "sudoers" "ssl/" "udev/" "dbus-1/" "mono/" "sensors3.conf" "profile.d/" "inputrc" "gnome-vfs-2.0/" "apg.conf" "javascript-common/" "NetworkManager/" "usb_modeswitch.d/" "ffserver.conf" "protocols" "bogofilter.cf" "fonts/" "linuxmint/" "security/" "adduser.conf" "alternatives/" "opt/" "crypttab" "bash.bashrc.dpkg-dist" "logcheck/" "bonobo-activation/" "blkid.tab.old" "passwd-" "icedtea-web/" "wvdial.conf" "ifplugd/" "init/" "bluetooth/" "ldap/" "libpaper.d/" "mailname" "odbc.ini" "nginx/" "ca-certificates/" "debconf.conf" "grub.d/" "gnome-vfs-mime-magic" "crontab" "modprobe.d/" "mke2fs.conf" "sudoers.d/" "nsswitch.conf" "gimp/" "pcmcia/" "samba/" "at-spi2/" "ucf.conf" "esound/" "exim4/" "kernel/" "gshadow-" "yafcrc" "firefox-3.5/" "polkit-1/" "python3/" "phpmyadmin/" "sensors.d/" "openal/" "bash_completion" "clutter-imcontext/" "lsb-release" "network/" "console-setup/" "dbconfig-common/" "os-release" "manpath.config" "papersize" "libaudit.conf" "adjtime" "PackageKit/" "menu/" "kbd/" "pam.conf" "timezone" "bindresvport.blacklist" "ndiswrapper/" "snmp/" "apm/" "rpc" "vga/" "ld.so.cache" "mplayer/" "dictionaries-common/" "localtime" "cron.weekly/" "apt/" "gtk-3.0/" "aliases" "discover.conf.d/" "obex-data-server/" "rc5.d/" "hosts" "xdg/" "ntp.conf" "ld.so.conf.d/" "acpi/" "printcap" "defoma/" "libreoffice/" "UPower/" "plymouth/" "asound.conf" "modules" "profile" "timidity/" "firefox-3.0/" "login.defs" "gtk-2.0/" "blkid.tab" "rc3.d/" "mime.types" "systemd/" "hosts.deny" "services" "group-" "gufw/" "hp/" "purple/" "usb_modeswitch.conf" ".java/" "mysql/" "perl/" "issue" "chatscripts/" "nanorc" "magic.mime" "ca-certificates.conf" "libnl-3/" "insserv.conf.d/" "hostname" "group" "ld.so.conf" "mtools.conf" "ts.conf" "sysctl.conf" "groff/" "locale.gen" "kernel-img.conf" "hdparm.conf" "apache2/" "hddtemp.db" "vlc/" "shadow-" "skel/" "dhcp/" "java-6-openjdk/" "initramfs-tools/" "gnome/" "rsyslog.conf" "dkms/" "sword.conf" "rc0.d/" "bash_completion.d/" "staff-group-for-usr-local" "pulse/" "sgml/" "fstab.d/" "ufw/" "debian_version" "insserv.conf" "motd" "uniconf.conf" "gshadow" ".pwd.lock" "mateconf/" "python2.7/" "libao.conf" "email-addresses" "rc.local" "shells" "init.d/" "passwd" "cron.d/" "firefox/" "pam.d/" "hal/" "inittab" "cron.daily/" "w3m/" "terminfo/" "host.conf" "securetty" "logrotate.d/" "fuse.conf" "ggi/" "networks" "gai.conf" "rc4.d/" "issue.net" "rsyslog.d/" "insserv/" "nail.rc" "bash.bashrc" "selinux/" "vdpau_wrapper.cfg" "python/" "sound/" "environment" "xml/" "resolvconf/" "ConsoleKit/" "cron.hourly/" "zsh_command_not_found" "ODBCDataSources/" "wildmidi/" "updatedb.conf" "hosts.allow" "odbcinst.ini" "mdm/" "colord.conf" "python2.6/" "sane.d/" "mailcap" "dhcp3/" "fstab" "logrotate.conf" "resolv.conf" "cups/" "php5/" "emacs23/" "ppp/" "locale.alias" "wgetrc" "ghostscript/" "emacs/" "fstab~" "dpkg/" "rcS.d/" "rc6.d/" "pnm2ppa.conf" "foomatic/" "menu-methods/" "ImageMagick/" "dm/" "calendar/" "magic" "discover-modprobe.conf" "../" "./")
+
+ ("/home/sel/Dokumenty/kursjs/" (20857 34241) "03-petle/" "02-warunki/" "./" "../" "04-funkcje-podstawy/" "01-zmienne/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
