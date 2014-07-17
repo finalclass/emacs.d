@@ -1,0 +1,9 @@
+auto-save-list
+*-cache/
+eshell/
+elpa
+*.elc
+url
+.cask/
+.mc-lists.el
+games/
