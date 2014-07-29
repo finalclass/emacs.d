@@ -2,14 +2,23 @@
 ;; SEMANTICDB Tags save file
 (semanticdb-project-database-file "gaad-viewer/"
   :tables (list 
-    (semanticdb-table "Gruntfile.js"
+   (semanticdb-table "Gruntfile.js"
     :major-mode 'js-mode
     :tags nil
     :file "Gruntfile.js"
     :pointmax 563
-    :fsize 562
-    :lastmodtime '(21447 36571 673433 105000)
+    :fsize 629
+    :lastmodtime '(21447 38658 474081 950000)
     :unmatched-syntax '((FUNCTION 18 . 26) (PAREN_BLOCK 26 . 33) (FUNCTION 18 . 26) (PAREN_BLOCK 26 . 33))
+    )
+   (semanticdb-table "package.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "package.json"
+    :pointmax 675
+    :fsize 675
+    :lastmodtime '(21446 25693 283209 988000)
+    :unmatched-syntax 'nil
     )
    )
   :file "!home!sel!Documents!industria!gaad!gaad!gaad-viewer!semantic.cache"

@@ -1,90 +1,112 @@
-((("setq" .
-   [2 0 0 0])
-  ("h" .
-   [1])
-  ("test" .
-   [1 0 0 0])
-  ("int" .
+((("get" .
    [1 0 0])
-  (":file" .
-   [1 0 0 0 0])
-  ("global-ede-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("semantic-mode" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("float.h" .
-   [1 0 0 1 0 0 0])
-  ("c-mode-hook" .
-   [0 0 0 0 0 0 0 0 1 0 0])
-  ("my:ac-c-header-init" .
-   [0 0 1 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("c++-mode-hook" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("add-hook" .
-   [2 0 0 0 0 2 0 0])
-  ("ac-sources" .
-   [0 0 0 0 0 0 2 0 0 1])
-  ("add-to-list" .
-   [1 0 0 0 0 0 0 0 0 1 1])
-  ("auto-complete-c-headers" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("require" .
-   [3 0 0 0 0 0 0])
-  ("defun" .
-   [2 0 0 0 0])
-  ("while" .
-   [0 0 0 1 0])
-  ("include" .
-   [1 0 0 0 0 0 0])
-  ("achead:include-directories" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("FlexLexer.h" .
-   [1 0 0 1 0 0 0 0 0 0 0])
-  ("c-mode-common-hook" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("my:add-semantic-to-autocomplete" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("multiple-cursors" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("sr-speedbar-right-side" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
-   [1 0 0])
-  ("config" .
-   [0 0 0 1 0 0])
-  ("stylus-mode" .
-   [1 0 0 0 1 0 0 0 0 0 0])
-  ("typescript-indent-level" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("private" .
-   [1 0 0 0 0 0 0])
-  ("any" .
-   [2 0 0])
-  ("void" .
-   [2 0 0 0])
-  ("return" .
+  ("public" .
    [1 0 0 0 0 0])
-  ("new" .
+  ("number" .
+   [4 0 0 0 0 0])
+  ("string" .
+   [5 0 0 0 0 0])
+  ("var" .
+   [2 0 0])
+  ("getRenderOptions" .
+   [1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("this" .
+   [4 0 0 0])
+  ("gaadData" .
+   [1 0 0 0 0 0 1 0])
+  ("data" .
+   [1 0 0 0])
+  ("IRenderOptions" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("GaadDataReader" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("gdr" .
    [2 0 0])
   ("interface" .
    [1 0 0 0 0 0 0 0 0])
-  ("gdr" .
-   [2 0 0])
-  ("GaadDataReader" .
-   [0 0 0 0 2 0 0 0 0 0 0 0 0 0])
-  ("IRenderOptions" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("data" .
-   [1 0 0 0])
-  ("gaadData" .
-   [0 0 0 0 0 0 1 0])
-  ("this" .
+  ("new" .
+   [3 0 0])
+  ("return" .
+   [4 0 0 0 0 0])
+  ("void" .
    [2 0 0 0])
-  ("getRenderOptions" .
-   [1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("var" .
+  ("any" .
+   [3 0 0])
+  ("private" .
+   [2 0 0 0 0 0 0])
+  ("typescript-indent-level" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("stylus-mode" .
+   [1 0 0 0 1 0 0 0 0 0 0])
+  ("config" .
+   [0 0 0 1 0 0])
+  ("nil" .
    [1 0 0])
-  ("string" .
-   [5 0 0 0 0 0])
-  ("number" .
-   [4 0 0 0 0 0])))
+  ("sr-speedbar-right-side" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("multiple-cursors" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("my:add-semantic-to-autocomplete" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c-mode-common-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("FlexLexer.h" .
+   [1 0 0 1 0 0 0 0 0 0 0])
+  ("achead:include-directories" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("include" .
+   [1 0 0 0 0 0 0])
+  ("while" .
+   [0 0 0 1 0])
+  ("defun" .
+   [2 0 0 0 0])
+  ("require" .
+   [3 0 0 0 0 0 0])
+  ("auto-complete-c-headers" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 1 1])
+  ("ac-sources" .
+   [0 0 0 0 0 0 2 0 0 1])
+  ("add-hook" .
+   [2 0 0 0 0 2 0 0])
+  ("c++-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("my:ac-c-header-init" .
+   [0 0 1 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c-mode-hook" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("float.h" .
+   [1 0 0 1 0 0 0])
+  ("semantic-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("global-ede-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  (":file" .
+   [1 0 0 0 0])
+  ("int" .
+   [1 0 0])
+  ("test" .
+   [1 0 0 0])
+  ("h" .
+   [1])
+  ("setq" .
+   [2 0 0 0])
+  ("if" .
+   [1 0])
+  ("req" .
+   [2 0 0])
+  ("query" .
+   [2 0 0 0 0])
+  ("res" .
+   [2 0 0])
+  ("render" .
+   [2 0 0 0 0 0])
+  ("else" .
+   [2 0 0 0])
+  ("JSON" .
+   [1 0 0 0])
+  ("parse" .
+   [1 0 0 0 0])
+  ("RenderOptions" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])))

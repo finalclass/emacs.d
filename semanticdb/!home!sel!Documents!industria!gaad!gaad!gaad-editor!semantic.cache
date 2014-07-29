@@ -1,0 +1,18 @@
+;; Object gaad-editor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gaad-editor/"
+  :tables (list 
+   (semanticdb-table "package.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "package.json"
+    :pointmax 592
+    :fsize 592
+    :lastmodtime '(21448 9527 243439 426000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!Documents!industria!gaad!gaad!gaad-editor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,22 @@
+;; Object gaed-dimensioning/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gaed-dimensioning/"
+  :tables (list 
+   (semanticdb-table "gaed-dimensioning.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("start dimensioning" section nil nil [172 234])
+            ("start dimensioning" section (:members 
+              ( ("id" anchor nil nil [1744 1747])
+                ("id" anchor nil nil [1997 2000]))              ) nil [234 3573]))          
+    :file "gaed-dimensioning.html"
+    :pointmax 3573
+    :fsize 3572
+    :lastmodtime '(21449 4020 67090 893000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!Documents!industria!gaad!gaad!gaad-editor!public!gaed-dimensioning!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
