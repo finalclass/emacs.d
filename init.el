@@ -36,10 +36,13 @@
  '(js3-consistent-level-indent-inner-bracket t))
 
 (defconst prettify-symbols-alist
-  '(("function"  . ?λ)))
+  '(
+    ("function" . ?λ)
+    ("return" . ?←)
+    ))
 
 (global-prettify-symbols-mode +1)
-
+(add-hook 'js3-mode-hook (lambda () (prettify-symbols-mode t)))
 
 					;tern
 (global-auto-complete-mode t)
