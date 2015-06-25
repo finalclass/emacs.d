@@ -1,114 +1,85 @@
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/")
-   t)
-    (package-initialize))
+; Emacs
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+(set-face-attribute 'default nil :height 130)
+(display-time-mode 1)
+(setq display-time-24hr-format t)
 
-(setq settings-dir
-      (expand-file-name "settings" user-emacs-directory))
-(add-to-list 'load-path settings-dir)
+; Packages
+(load-file "~/.emacs.d/better-defaults/better-defaults.el")
+(require 'better-defaults)
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+(require 'yasnippet)
+(yas-global-mode 1)
+(defun my:ac-c-header-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include/"))
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
+(semantic-mode 1)
+(defun my:add-semantic-to-autocomplete()
+  (add-to-list 'ac-sources 'ac-source-semantic))
+(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+(global-ede-mode 1)
+(ede-cpp-root-project "main" :file "~sel/main.cpp")
+(global-semantic-idle-scheduler-mode 1)
+(require 'multiple-cursors)
+(global-set-key (kbd "C-M-l") 'mc/edit-lines)
+(global-set-key (kbd "C-j") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-u") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-j") 'mc/mark-all-like-this)
 
-					;setup extensions
-(require 'setup-yasnippet)
+(require 'sr-speedbar)
+(global-set-key (kbd "M-1") 'sr-speedbar-toggle)
+(setq sr-speedbar-right-side nil)
+(custom-set-variables '(speedbar-show-unknown-files t))
 
-(ido-mode)
+(require 'typescript)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(require 'tss)
+(setq tss-popup-help-key "C-:")
+(setq tss-jump-to-definition-key "C->")
+;; Make config suit for you. About the config item, eval the following sexp.
+;; (customize-group "tss")
+;; Do setting recommemded configuration
+(tss-config-default)
 
-					;JavaScript
-;; js3-mode
-(autoload 'js3-mode "js3" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
-(custom-set-variables
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(js3-indent-level 4)
- '(js3-auto-indent-p t)
- '(js3-strict-trailing-comma-warning nil)
- '(js3-indent-on-enter-key t)
- '(js3-enter-indents-newline t)
- '(js3-consistent-level-indent-inner-bracket t))
+(require 'org)
+(setq org-return-follows-link t)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
 
-					;tern
-(global-auto-complete-mode t)
-(add-hook 'js3-mode-hook (lambda () (tern-mode t)))
-(add-hook 'js3-mode-hook (lambda () (auto-complete-mode t)))
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-           (tern-ac-setup)))
-		
-					;JSON
-(add-hook 'json-mode-hook ;indentation
-	  (lambda ()
-	    (make-local-variable 'js-indent-level)
-	                (setq js-indent-level 2)))
+(require 'stylus-mode)
+(add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
 
-					;GUI config
-(tool-bar-mode -1)
-(require 'darcula-theme)
-(set-frame-font "Inconsolata-12")
-(setq-default line-spacing 4)
+(require 'jade-mode)
+(add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
-					;other
-(setq inhibit-startup-message t)
-(fset 'yes-or-no-p 'y-or-n-p)
-(setq transient-mark-mode t)
-(setq visible-bell t)
-(show-paren-mode t)
-(pending-delete-mode t)
-(setq ns-alternate-modifier 'meta)
-(setq ns-right-alternate-modifier nil)
+(setq js-indent-level 2)
+(setq typescript-indent-level 2)
 
-					;autosave & backup
-(defvar backup-dir (expand-file-name "~/.emacs.d/backup/"))
-(defvar autosave-dir (expand-file-name "~/.emacs.d/autosave/"))
-(setq backup-directory-alist (list (cons ".*" backup-dir)))
-(setq auto-save-list-file-prefix autosave-dir)
-(setq auto-save-file-name-transforms `((".*" ,autosave-dir t)))
+; Backups
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
 
 
-					;smart-tab
-(global-smart-tab-mode 1)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-					;keyboard shortcuts
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-					;multiple-cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-unset-key (kbd "C-j")) (global-set-key (kbd "C-j") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-,") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-`") 'er/expand-region)
-
-					;scrolling
-(global-set-key (kbd "M-<down>") `scroll-up-line)
-(global-set-key (kbd "M-<up>") `scroll-down-line)
-
-					;windows
-(global-set-key (kbd "C-x -") 'shrink-window-if-larger-than-buffer)
-(global-set-key (kbd "C-M-<down>") 'shrink-window)
-(global-set-key (kbd "C-x +") 'balance-windows)
-(global-set-key (kbd "C-M-<up>") 'enlarge-window)
-(global-set-key (kbd "C-x ^") 'enlarge-window)
-(global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
-
-					;moving
-(global-set-key (kbd "C-<up>") (lambda () (interactive) (previous-line 5)))
-(global-set-key (kbd "C-<down>") (lambda () (interactive) (next-line 5)))
-
-					;other
-(global-set-key (kbd "C-x z") 'repeat)
-
-					;selection
-(global-set-key (kbd "C-x h") 'mark-whole-buffer)
-
-					;indent
-(global-set-key (kbd "C-M-\\") 'indent-region)
-
-					;emmet
-(global-set-key (kbd "C-;") 'emmet-expand-line)
+; JavaScript / JSON
+(add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
+(setq js2-missing-semi-one-line-override t)
+(setq-default js2-basic-offset 2)

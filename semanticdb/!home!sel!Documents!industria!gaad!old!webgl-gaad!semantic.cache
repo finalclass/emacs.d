@@ -1,0 +1,18 @@
+;; Object webgl-gaad/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "webgl-gaad/"
+  :tables (list 
+   (semanticdb-table "package.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "package.json"
+    :pointmax 722
+    :fsize 721
+    :lastmodtime '(21160 29059 950973 989000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!Documents!industria!gaad!old!webgl-gaad!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

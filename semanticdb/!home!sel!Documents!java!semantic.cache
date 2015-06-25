@@ -1,0 +1,33 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables (list 
+   (semanticdb-table "FatCalories.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("java.io.*" include nil nil [1 18])
+            ("FatCalories" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [77 90]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [52 146]))                  
+                :type "class")
+                nil [20 148]))          
+    :file "FatCalories.java"
+    :pointmax 149
+    :fsize 148
+    :lastmodtime '(21455 24225 322303 985000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!sel!Documents!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
