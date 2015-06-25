@@ -15,6 +15,12 @@
 
 (ido-mode)
 
+					;zap-up-to-char
+(autoload 'zap-up-to-char "misc"
+    "Kill up to, but not including ARGth occurrence of CHAR.
+    \(fn arg char)"
+    'interactive)
+
 					;JavaScript
 ;; js3-mode
 (autoload 'js3-mode "js3" nil t)
@@ -112,3 +118,6 @@
 
 					;emmet
 (global-set-key (kbd "C-;") 'emmet-expand-line)
+
+					;zap-up-to-char replacement
+(global-set-key "\M-z" 'zap-up-to-char)
