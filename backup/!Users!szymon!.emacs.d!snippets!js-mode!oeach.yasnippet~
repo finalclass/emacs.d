@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: oeach
+# key: oeach
+# --
+Object.keys(#{keys}).forEach(function (${key:key}) {
+    {$0}
+});

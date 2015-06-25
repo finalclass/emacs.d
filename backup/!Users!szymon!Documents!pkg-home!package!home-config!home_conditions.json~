@@ -1,0 +1,16 @@
+{
+  "has_profile_to_complete": {
+    "name": "Has profile to complete?",
+    "lib": "lib/profile/hasprofiletocomplete",
+    "func": "hasProfileToComplete",
+    "form_fields": {}
+  },
+
+  "has_survey": {
+    "name": "Has survey?",
+    "lib": "lib/survey/hassurvey",
+    "func": "hasSurvey",
+    "form_fields": {}
+  }
+  
+}
