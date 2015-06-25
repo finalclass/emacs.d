@@ -1,4 +1,6 @@
-((("emmet-mode-keymap" .
+((("function" .
+   [5 0 0 1 0 0 0 0])
+  ("emmet-mode-keymap" .
    [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
   ("emmet" .
    [2 0 0 0 0])

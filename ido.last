@@ -17,14 +17,14 @@
  ("/Users/szymon/Documents/pkg-meeting-centre/package/" . "metadata/")
  ("/Users/szymon/Documents/pkg-meeting-centre/" . "package/")
  ("/Users/szymon/Documents/" . "pkg-home/")
- ("/Users/szymon/" . "Documents/")
+ ("/Users/szymon/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/szymon/.emacs.d/settings/"
  "/Users/szymon/Documents/pkg-home/package/bstg-source/"
  "/Users/szymon/.emacs.d/"
+ "/Users/szymon/.emacs.d/settings/"
  "/Users/szymon/Documents/pkg-home/package/bstg-template/"
  "/Users/szymon/Documents/pkg-home/package/home-config/"
  "/Users/szymon/.emacs.d/snippets/js-mode/"
@@ -53,29 +53,29 @@
 
 ;; ----- ido-work-file-list -----
 (
- "setup-yasnippet.el"
- "home-editor-block-editor-directive.js"
+ "home-editor-block-service.js"
  "init.el"
+ "home-editor-block-editor-directive.js"
+ "home-editor-conditions-directive.js"
+ "home-editor-condition-service.js"
+ "setup-yasnippet.el"
  "home-editor-block-editor.html"
  "home-editor-conditions.html"
  "home_conditions.json"
  "oeach.yasnippet"
- ".yas-parents"
- "home-editor-condition-service.js"
- "home_blocks_atevent.json"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/szymon/" (21900 14290 0 0) "tt.txt~" "tt.txt" "tmp/" "t.txt" "Public/" "Pictures/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bashrc~" ".bash_profile~" ".bash_profile" ".bash_history" ".avidemux6/" ".atom/" "../" "./")
+ ("/Users/szymon/.emacs.d/" (21900 15250 0 0) "url/" "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "backups/" "backup/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
 
- ("/Users/szymon/.emacs.d/" (21900 14401 0 0) "url/" "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "better-defaults/" "backups/" "backup/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21900 15277 0 0) "home-generic-block-builder-service.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-name-form-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "../" "./")
+
+ ("/Users/szymon/" (21900 15111 0 0) "tt.txt~" "tt.txt" "tmp/" "t.txt" "Public/" "Pictures/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bashrc~" ".bash_profile~" ".bash_profile" ".bash_history" ".avidemux6/" ".atom/" "../" "./")
 
  ("/Users/szymon/.emacs.d/elpa/yasnippet-20150415.244/" (21900 14376 0 0) "yasnippet.elc" "yasnippet.el" "yasnippet-pkg.el" "yasnippet-autoloads.el~" "yasnippet-autoloads.el" "snippets/" "../" "./")
 
  ("/Users/szymon/.emacs.d/settings/" (21900 11354 0 0) "setup-yasnippet.el~" "setup-yasnippet.el" "../" "./")
-
- ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21900 10311 0 0) "home-generic-block-builder-service.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-name-form-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "../" "./")
 
  ("/Users/szymon/Documents/pkg-home/package/" (21900 7977 0 0) "pkg.json" "navs/" "main-config/" "home-config/" "gfx/" "ddocs/" "bstg-template/" "bstg-source/" "blueprint/" "appscripts/" "../" "./")
 

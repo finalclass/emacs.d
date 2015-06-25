@@ -35,6 +35,11 @@
  '(js3-enter-indents-newline t)
  '(js3-consistent-level-indent-inner-bracket t))
 
+(defconst prettify-symbols-alist
+  '(("function"  . ?λ)))
+
+(global-prettify-symbols-mode +1)
+
 
 					;tern
 (global-auto-complete-mode t)
