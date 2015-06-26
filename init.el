@@ -1,14 +1,38 @@
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/")
-   t)
-    (package-initialize))
+;; (when (>= emacs-major-version 24)
+  ;; (require 'package)
+  ;; (add-to-list
+   ;; 'package-archives
+   ;; '("melpa" . "http://melpa.org/packages/")
+   ;; t)
+    ;; (package-initialize))
 
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
 (add-to-list 'load-path settings-dir)
+
+
+					;packages
+;; Setup packages
+(require 'setup-package)
+
+(defun init--install-packages ()
+  (package-install 'magit)
+  (package-install 'flx-ido)
+  (package-install 'yasnippet)
+  (package-install 'smartparens)
+  (package-install 'ido-vertical-mode)
+  (package-install 'ido-at-point)
+  (package-install 'multiple-cursors)
+  (package-install 'tern)
+  (package-install 'tern-auto-complete)
+  (package-install 'js3-mode)
+  (package-install 'auto-complete)
+  (package-install 'darcula-theme)
+  (package-install 'smart-tab)
+  (package-install 'emmet-mode)
+  )
+
+(init--install-packages)
 
 					;setup extensions
 (require 'setup-yasnippet)

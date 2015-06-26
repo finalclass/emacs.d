@@ -5,11 +5,11 @@
  ("/Users/szymon/.emacs.d/snippets/" . "js-mode/")
  ("/Users/" . "szymon/")
  ("/Users/szymon/.emacs.d/elpa/" . "js3-mode-20140805.1529/")
- ("/Users/szymon/Documents/pkg-home/package/" . "bstg-source/")
+ ("/Users/szymon/Documents/pkg-home/package/" . "blueprint/")
  ("/Users/szymon/Documents/pkg-home/" . "package/")
  ("/Users/szymon/Documents/tool-local-system/" . "conf/")
  ("/Users/szymon/.emacs.d/tern/" . "emacs/")
- ("/Users/szymon/.emacs.d/" . "snippets/")
+ ("/Users/szymon/.emacs.d/" . "settings/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/js/" . "gathering/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/" . "meeting_centre/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/handlers/" . "meeting-centre/")
@@ -23,16 +23,16 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/szymon/.emacs.d/"
- "/Users/szymon/Documents/pkg-home/package/bstg-source/"
- "/Users/szymon/.emacs.d/snippets/js-mode/"
  "/Users/szymon/.emacs.d/settings/"
+ "/Users/szymon/Documents/pkg-home/package/blueprint/"
+ "/Users/szymon/Documents/pkg-home/package/bstg-source/"
  "/Users/szymon/Documents/pkg-home/package/bstg-template/"
+ "/Users/szymon/.emacs.d/"
+ "/Users/szymon/.emacs.d/snippets/js-mode/"
  "/Users/szymon/Documents/pkg-home/package/home-config/"
  "/Users/szymon/.emacs.d/snippets/js3-mode/"
  "/Users/szymon/.emacs.d/elpa/js3-mode-20140805.1529/"
  "/Users/szymon/Documents/pkg-home/package/"
- "/Users/szymon/Documents/pkg-home/package/blueprint/"
  "/Users/szymon/Documents/pkg-home/package/navs/"
  "/Users/szymon/Documents/pkg-recommendations/package/"
  "/Users/szymon/Documents/pkg-meeting-centre/package/metadata/"
@@ -54,39 +54,41 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "home-editor-conditions-directive.js"
- "oeach.yasnippet"
- "con.yasnippet"
- "home-editor-block-editor-directive.js"
- "home-editor-block-service.js"
- "home-editor-condition-service.js"
- "setup-yasnippet.el"
+ "setup-package.el"
+ "blueprint.json"
+ "home-editor-controller.js"
+ "home-editor-layout-service.js"
  "home-editor-block-editor.html"
+ "home-editor-layout-editor.html"
+ "home-editor-condition-service.js"
+ "init.el"
  "home-editor-conditions.html"
+ "home-editor-conditions-directive.js"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/szymon/" (21901 1609 0 0) "tut.el" "tt.txt~" "tt.txt" "tmp/" "t.txt" "Public/" "Pictures/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bashrc~" ".bash_profile~" ".bash_profile" ".bash_history" ".avidemux6/" ".atom/" "../" "./")
+ ("/Users/szymon/.emacs.d/" (21901 7501 0 0) "url/" "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "backups/" "backup/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21900 65509 0 0) "home-generic-block-builder-service.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-name-form-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "../" "./")
+ ("/Users/szymon/.emacs.d/settings/" (21901 7438 0 0) "setup-yasnippet.el~" "setup-yasnippet.el" "setup-package.el" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/bstg-template/" (21901 6685 0 0) "home-generic-fragment.html" "home-editor.html" "home-editor.css" "home-editor-layouts-list.html" "home-editor-layout.html" "home-editor-layout-select.html" "home-editor-layout-part.html" "home-editor-layout-name-form.html" "home-editor-layout-editor.html" "home-editor-conditions.html" "home-editor-block-editor.html" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21901 6644 0 0) "home-generic-block-builder-service.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-name-form-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/blueprint/" (21901 6546 0 0) "blueprint.json" "../" "./")
+
+ ("/Users/szymon/" (21901 2610 0 0) "tut.el" "tt.txt~" "tt.txt" "tmp/" "t.txt" "Public/" "Pictures/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bashrc~" ".bash_profile~" ".bash_profile" ".bash_history" ".avidemux6/" ".atom/" ".#.zshrc" "../" "./")
 
  ("/Users/szymon/.emacs.d/snippets/js-mode/" (21900 65285 0 0) "oeach.yasnippet" "con.yasnippet" "../" "./")
 
  ("/Users/szymon/.emacs.d/snippets/" (21900 11354 0 0) "js3-mode/" "js-mode/" "../" "./")
 
- ("/Users/szymon/.emacs.d/" (21900 34129 0 0) "url/" "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "backups/" "backup/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
-
  ("/Users/szymon/.emacs.d/elpa/js3-mode-20140805.1529/" (21900 14634 0 0) "js3.elc" "js3.el" "js3-mode.elc" "js3-mode.el" "js3-mode-pkg.el" "js3-mode-autoloads.el~" "js3-mode-autoloads.el" "../" "./")
 
  ("/Users/szymon/.emacs.d/snippets/js3-mode/" (21900 11354 0 0) ".yas-parents" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/bstg-template/" (21900 10339 0 0) "home-generic-fragment.html" "home-editor.html" "home-editor.css" "home-editor-layouts-list.html" "home-editor-layout.html" "home-editor-layout-select.html" "home-editor-layout-part.html" "home-editor-layout-name-form.html" "home-editor-layout-editor.html" "home-editor-conditions.html" "home-editor-block-editor.html" "../" "./")
-
  ("/Users/szymon/.emacs.d/elpa/yasnippet-20150415.244/" (21900 14376 0 0) "yasnippet.elc" "yasnippet.el" "yasnippet-pkg.el" "yasnippet-autoloads.el~" "yasnippet-autoloads.el" "snippets/" "../" "./")
-
- ("/Users/szymon/.emacs.d/settings/" (21900 11354 0 0) "setup-yasnippet.el~" "setup-yasnippet.el" "../" "./")
 
  ("/Users/szymon/Documents/pkg-home/package/" (21900 7977 0 0) "pkg.json" "navs/" "main-config/" "home-config/" "gfx/" "ddocs/" "bstg-template/" "bstg-source/" "blueprint/" "appscripts/" "../" "./")
 
@@ -99,8 +101,6 @@
  ("/usr/local/Cellar/emacs/24.5/share/info/emacs/" (21860 29734 0 0) "woman.info.gz" "wisent.info.gz" "widget.info.gz" "viper.info.gz" "vip.info.gz" "url.info.gz" "tramp.info.gz" "todo-mode.info.gz" "srecode.info.gz" "speedbar.info.gz" "smtpmail.info.gz" "sieve.info.gz" "ses.info.gz" "semantic.info.gz" "sc.info.gz" "sasl.info.gz" "remember.info.gz" "reftex.info.gz" "rcirc.info.gz" "pgg.info.gz" "pcl-cvs.info.gz" "org.info.gz" "octave-mode.info.gz" "nxml-mode.info.gz" "newsticker.info.gz" "mh-e.info.gz" "message.info.gz" "mairix-el.info.gz" "info.info.gz" "ido.info.gz" "idlwave.info.gz" "htmlfontify.info.gz" "gnus.info.gz" "forms.info.gz" "flymake.info.gz" "eww.info.gz" "eudc.info.gz" "eshell.info.gz" "ert.info.gz" "erc.info.gz" "epa.info.gz" "emacs.info.gz" "emacs-mime.info.gz" "emacs-gnutls.info.gz" "elisp.info.gz" "eintr.info.gz" "eieio.info.gz" "efaq.info.gz" "edt.info.gz" "ediff.info.gz" "ede.info.gz" "ebrowse.info.gz" "dired-x.info.gz" "dir" "dbus.info.gz" "cl.info.gz" "ccmode.info.gz" "calc.info.gz" "bovine.info.gz" "autotype.info.gz" "auth.info.gz" "ada-mode.info.gz" "../" "./")
 
  ("/Users/" (21893 44613 0 0) "szymon/" "Shared/" ".localized" "../" "./")
-
- ("/Users/szymon/Documents/pkg-home/package/blueprint/" (21898 46876 0 0) "blueprint.json" "../" "./")
 
  ("/Users/szymon/Documents/pkg-home/package/navs/" (21892 16504 0 0) "nav_spotman.json" "nav_home.json" "../" "./")
 
