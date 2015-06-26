@@ -1,30 +1,40 @@
-((("boldify-names" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("other-window" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
+((("$rootScope" .
+   [1 0 0 0 0 0 0 1 0 0])
+  ("getAvailableConditions" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get" .
    [1 0 0])
-  ("while" .
-   [1 0 0 0 0])
-  ("point-min" .
-   [0 0 1 0 0 0 0 0 0])
-  ("goto-char" .
-   [0 0 0 0 1 0 0 0 0])
-  ("switch-to-buffer-other-window" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("js3" .
-   [1 0 0])
-  ("require" .
-   [2 0 0 0 0 0 0])
-  ("global-set-key" .
-   [1 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [3 0 0])
-  ("emmet" .
-   [2 0 0 0 0])
+  ("condition" .
+   [1 0 0 0 0 0 0 0 0])
+  ("return" .
+   [1 0 0 0 0 0])
+  ("function" .
+   [5 0 0 1 0 0 0 1])
   ("emmet-mode-keymap" .
    [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("function" .
-   [5 0 0 1 0 0 0 0])))
+  ("emmet" .
+   [2 0 0 0 0])
+  ("kbd" .
+   [3 0 0])
+  ("global-set-key" .
+   [1 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("require" .
+   [2 0 0 0 0 0 0])
+  ("js3" .
+   [1 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("switch-to-buffer-other-window" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("goto-char" .
+   [0 0 0 0 1 0 0 0 0])
+  ("point-min" .
+   [0 0 1 0 0 0 0 0 0])
+  ("while" .
+   [1 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("other-window" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("boldify-names" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])))

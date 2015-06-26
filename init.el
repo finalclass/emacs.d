@@ -13,7 +13,19 @@
 					;setup extensions
 (require 'setup-yasnippet)
 
-(ido-mode)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+					;server
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 
 					;zap-up-to-char
 (autoload 'zap-up-to-char "misc"
@@ -63,7 +75,7 @@
 					;GUI config
 (tool-bar-mode -1)
 (require 'darcula-theme)
-(set-frame-font "Inconsolata-12")
+(set-frame-font "Inconsolata-18")
 (setq-default line-spacing 4)
 
 					;other
@@ -85,10 +97,26 @@
 					;smart-tab
 (global-smart-tab-mode 1)
 
+					;comment
+
+(defun toggle-comment-on-region-or-line ()
+    "Comments or uncomments the region or the current line if there's no active region."
+    (interactive)
+    (let (beg end)
+        (if (region-active-p)
+            (setq beg (region-beginning) end (region-end))
+            (setq beg (line-beginning-position) end (line-end-position)))
+        (comment-or-uncomment-region beg end)
+        (next-line)))
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 					;keyboard shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+					;commenting
+(global-set-key (kbd "C-\\") 'toggle-comment-on-region-or-line) 
 
 					;multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
