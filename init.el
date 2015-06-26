@@ -112,6 +112,18 @@
 (setq ns-alternate-modifier 'meta)
 (setq ns-right-alternate-modifier nil)
 
+					;moving
+(defun smart-beginning-of-line ()
+  "Move point to first non-whitespace character or beginning-of-line.
+
+Move point to the first non-whitespace character on this line.
+If point was already at that position, move point to beginning of line."
+  (interactive)
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
+
 					;autosave & backup
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -133,11 +145,13 @@
         (comment-or-uncomment-region beg end)
         (next-line)))
 
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 					;keyboard shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+					;home/end
+(global-unset-key (kbd "<end>"))
+(global-unset-key (kbd "<home>"))
 
 					;commenting
 (global-set-key (kbd "C-\\") 'toggle-comment-on-region-or-line) 
@@ -165,6 +179,7 @@
 					;moving
 (global-set-key (kbd "C-<up>") (lambda () (interactive) (previous-line 5)))
 (global-set-key (kbd "C-<down>") (lambda () (interactive) (next-line 5)))
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
 
 					;other
 (global-set-key (kbd "C-x z") 'repeat)
@@ -179,4 +194,6 @@
 (global-set-key (kbd "C-;") 'emmet-expand-line)
 
 					;zap-up-to-char replacement
-(global-set-key "\M-z" 'zap-up-to-char)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
+(global-set-key (kbd "C-M-z") 'repeat)
