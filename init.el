@@ -35,14 +35,15 @@
  '(js3-enter-indents-newline t)
  '(js3-consistent-level-indent-inner-bracket t))
 
-(defconst prettify-symbols-alist
-  '(
-    ("function" . ?λ)
-    ("return" . ?←)
-    ))
+; prettify symbls are causing the problem when you place a parentisies after the function name
+;(defconst prettify-symbols-alist
+;  '(
+;    ("function" . ?λ)
+;    ("return" . ?←)
+;    ))
 
-(global-prettify-symbols-mode +1)
-(add-hook 'js3-mode-hook (lambda () (prettify-symbols-mode t)))
+;(global-prettify-symbols-mode +1)
+;(add-hook 'js3-mode-hook (lambda () (prettify-symbols-mode t)))
 
 					;tern
 (global-auto-complete-mode t)
