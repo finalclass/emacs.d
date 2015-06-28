@@ -1,11 +1,3 @@
-;; (when (>= emacs-major-version 24)
-  ;; (require 'package)
-  ;; (add-to-list
-   ;; 'package-archives
-   ;; '("melpa" . "http://melpa.org/packages/")
-   ;; t)
-    ;; (package-initialize))
-
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
 (add-to-list 'load-path settings-dir)
