@@ -15,13 +15,13 @@
   (package-install 'ido-vertical-mode)
   (package-install 'ido-at-point)
   (package-install 'multiple-cursors)
-  (package-install 'tern)
-  (package-install 'tern-auto-complete)
-  (package-install 'js3-mode)
+  (package-install 'js2-mode)
   (package-install 'auto-complete)
   (package-install 'darcula-theme)
-  (package-install 'smart-tab)
   (package-install 'emmet-mode)
+  (package-install 'company-restclient)
+  (package-install 'ac-js2)
+  (package-install 'restclient)
   )
 
 (init--install-packages)
@@ -42,6 +42,9 @@
 (unless (server-running-p)
   (server-start))
 
+					;shell
+
+(setenv "PATH" (concat "/usr/local/bin:" "/Users/szymon/.nvm/v0.10.38/bin:" (getenv "PATH")))
 
 					;zap-up-to-char
 (autoload 'zap-up-to-char "misc"
@@ -49,49 +52,69 @@
     \(fn arg char)"
     'interactive)
 
+
+					;kill whitespace
+
+(defun kill-whitespace ()
+          "Kill the whitespace between two non-whitespace characters"
+          (interactive "*")
+          (save-excursion
+            (save-restriction
+              (save-match-data
+                (progn
+                  (re-search-backward "[^ \t\r\n]" nil t)
+                  (re-search-forward "[ \t\r\n]+" nil t)
+                  (replace-match "" nil nil))))))
+
 					;JavaScript
-;; js3-mode
-(autoload 'js3-mode "js3" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+;; js2-mode
+;(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (custom-set-variables
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(js3-indent-level 4)
- '(js3-auto-indent-p t)
- '(js3-strict-trailing-comma-warning nil)
- '(js3-indent-on-enter-key t)
- '(js3-enter-indents-newline t)
- '(js3-consistent-level-indent-inner-bracket t))
+ '(js2-indent-level 4)
+ '(js2-auto-indent-p t)
+ '(js2-strict-trailing-comma-warning nil)
+ '(js2-indent-on-enter-key t)
+ '(js2-enter-indents-newline t)
+ '(js2-consistent-level-indent-inner-bracket t))
 
-; prettify symbls are causing the problem when you place a parentisies after the function name
-;(defconst prettify-symbols-alist
-;  '(
-;    ("function" . ?λ)
-;    ("return" . ?←)
-;    ))
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq ac-js2-evaluate-calls t)
 
-;(global-prettify-symbols-mode +1)
-;(add-hook 'js3-mode-hook (lambda () (prettify-symbols-mode t)))
+;; prettify symbls are causing the problem when you place a parentisies after the function name
+(defconst prettify-symbols-alist
+ '(
+   ("function" . ?λ)
+   ("return" . ?←)
+   ))
 
-					;tern
-(global-auto-complete-mode t)
-(add-hook 'js3-mode-hook (lambda () (tern-mode t)))
-(add-hook 'js3-mode-hook (lambda () (auto-complete-mode t)))
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-           (tern-ac-setup)))
-		
+(global-prettify-symbols-mode +1)
+(add-hook 'js2-mode-hook (lambda () (prettify-symbols-mode t)))
+
+					;company
+(eval-after-load 'company 
+  '(add-to-list 'company-backends 'company-tern)
+  )
+
+					;restclient
+(eval-after-load 'company 
+  '(add-to-list 'company-backends 'company-restclient))
+
 					;JSON
-(add-hook 'json-mode-hook ;indentation
-	  (lambda ()
-	    (make-local-variable 'js-indent-level)
-	                (setq js-indent-level 2)))
+
+(add-hook 'json-mode-hook 'lambda () (setq js-indent-level 2))
+
+;; (add-hook 'json-mode-hook ;indentation
+	  ;; (lambda ()
+	    ;; (make-local-variable 'js-indent-level)
+	                ;; (setq js-indent-level 2)))
 
 					;GUI config
 (tool-bar-mode -1)
 (require 'darcula-theme)
-(set-frame-font "Inconsolata-18")
+(set-frame-font "Inconsolata-12")
 (setq-default line-spacing 4)
 
 					;other
@@ -121,9 +144,6 @@ If point was already at that position, move point to beginning of line."
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
-					;smart-tab
-(global-smart-tab-mode 1)
 
 					;comment
 
@@ -189,3 +209,12 @@ If point was already at that position, move point to beginning of line."
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (global-set-key (kbd "C-M-z") 'repeat)
+
+					;fipl
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+					;kill whitespace
+(global-set-key (kbd "C-x j") 'kill-whitespace)

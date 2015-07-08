@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: create object function
+# key: cobj
+# --
+
+function create${Obj}(spec) {
+    var self = Object.create(null);
+
+    $0
+
+    return Object.defineProperties(self, {
+
+    });
+}
