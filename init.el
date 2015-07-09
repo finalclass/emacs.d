@@ -42,6 +42,25 @@
 (unless (server-running-p)
   (server-start))
 
+					;indent after yanking
+(dolist (command '(yank yank-pop))
+   (eval `(defadvice ,command (after indent-region activate)
+            (and (not current-prefix-arg)
+                 (member major-mode '(emacs-lisp-mode lisp-mode
+                                                      clojure-mode    scheme-mode
+                                                      haskell-mode    ruby-mode
+                                                      rspec-mode      python-mode
+                                                      c-mode          c++-mode
+                                                      objc-mode       latex-mode
+						      js2-mode js-mode html-mode css-mode
+                                                      plain-tex-mode))
+                 (let ((mark-even-if-inactive transient-mark-mode))
+                   (indent-region (region-beginning) (region-end) nil))))))
+
+
+
+
+
 					;shell
 
 (setenv "PATH" (concat "/usr/local/bin:" "/Users/szymon/.nvm/v0.10.38/bin:" (getenv "PATH")))
@@ -71,14 +90,17 @@
 ;(autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(js2-indent-level 4)
  '(js2-auto-indent-p t)
- '(js2-strict-trailing-comma-warning nil)
- '(js2-indent-on-enter-key t)
+ '(js2-consistent-level-indent-inner-bracket t)
  '(js2-enter-indents-newline t)
- '(js2-consistent-level-indent-inner-bracket t))
+ '(js2-indent-level 4)
+ '(js2-indent-on-enter-key t)
+ '(js2-strict-trailing-comma-warning nil)
+ '(org-agenda-files (quote ("~/todo-home.org"))))
 
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (setq ac-js2-evaluate-calls t)
@@ -213,8 +235,16 @@ If point was already at that position, move point to beginning of line."
 					;fipl
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
+					;Moving between windows (S-<left> etc...)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+(setq org-replace-disputed-keys t)
 
 					;kill whitespace
 (global-set-key (kbd "C-x j") 'kill-whitespace)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
