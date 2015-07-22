@@ -1,8 +1,7 @@
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
+
 (add-to-list 'load-path settings-dir)
-
-
 					;packages
 ;; Setup packages
 (require 'setup-package)
@@ -35,6 +34,57 @@
 (flx-ido-mode 1)
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
+
+					;duplicate line
+(defun duplicate-line (arg)
+  "Duplicate current line, leaving point in lower line."
+  (interactive "*p")
+
+  ;; save the point for undo
+  (setq buffer-undo-list (cons (point) buffer-undo-list))
+
+  ;; local variables for start and end of line
+  (let ((bol (save-excursion (beginning-of-line) (point)))
+        eol)
+    (save-excursion
+
+      ;; don't use forward-line for this, because you would have
+      ;; to check whether you are at the end of the buffer
+      (end-of-line)
+      (setq eol (point))
+
+      ;; store the line and disable the recording of undo information
+      (let ((line (buffer-substring bol eol))
+            (buffer-undo-list t)
+            (count arg))
+        ;; insert the line arg times
+        (while (> count 0)
+          (newline)         ;; because there is no newline in 'line'
+          (insert line)
+          (setq count (1- count)))
+        )
+
+      ;; create the undo information
+      (setq buffer-undo-list (cons (cons eol (point)) buffer-undo-list)))
+    ) ; end-of-let
+
+  ;; put the point in the lowest line and return
+  (next-line arg))
+
+
+					;magit
+
+(setq magit-last-seen-setup-instructions "1.4.0")
+
+                                        ;org-babel
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (emacs-lisp . t)
+   (js . t)
+   )
+ )
 
 					;server
 
@@ -105,6 +155,8 @@
  '(js2-indent-on-enter-key t)
  '(js2-strict-trailing-comma-warning nil)
  '(org-agenda-files (quote ("~/todo-home.org"))))
+
+(setq-default indent-tabs-mode nil)
 
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (setq ac-js2-evaluate-calls t)
@@ -252,3 +304,8 @@ If point was already at that position, move point to beginning of line."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+					;duplicate line
+(global-set-key (kbd "C-c C-d") 'duplicate-line)
+(put 'upcase-region 'disabled nil)

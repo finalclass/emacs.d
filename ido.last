@@ -2,15 +2,29 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/lib/" . "can/")
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/" . "can/")
+ ("/Users/szymon/Documents/pkg-can/package/" . "navs/")
+ ("/Users/szymon/Documents/pkg-can/" . "package/")
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/" . "src/")
+ ("/Users/szymon/Documents/tool-local-system/rcouch/" . "etc/")
+ ("/Users/szymon/Documents/pkg-home-tests/package/" . "home-config/")
+ ("/Users/szymon/Documents/pkg-home-tests/" . "package/")
+ ("/Users/szymon/Dropbox (SpotMe)/20150712_ICRSM15_Amsterdam/" . "TechnicalRealm/")
+ ("/Users/szymon/Dropbox (SpotMe)/" . "20150712_ICRSM15_Amsterdam/")
+ ("/Users/szymon/Documents/pkg-home-preprod/package/" . "home-config/")
+ ("/Users/szymon/Documents/pkg-test/package/" . "home-config/")
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/" . "utils/")
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/" . "lib/")
  ("/" . ".DocumentRevisions-V100/")
  ("/Users/szymon/.emacs.d/snippets/" . "js-mode/")
  ("/Users/" . "szymon/")
  ("/Users/szymon/.emacs.d/elpa/" . "js3-mode-20140805.1529/")
  ("/Users/szymon/Documents/pkg-home/package/" . "bstg-source/")
  ("/Users/szymon/Documents/pkg-home/" . "package/")
- ("/Users/szymon/Documents/tool-local-system/" . "conf/")
+ ("/Users/szymon/Documents/tool-local-system/" . "rcouch/")
  ("/Users/szymon/.emacs.d/tern/" . "emacs/")
- ("/Users/szymon/.emacs.d/" . "settings/")
+ ("/Users/szymon/.emacs.d/" . "backups/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/js/" . "gathering/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/" . "meeting_centre/")
  ("/Users/szymon/Documents/pkg-meeting-centre/package/handlers/" . "meeting-centre/")
@@ -19,29 +33,50 @@
  ("/Users/szymon/Documents/pkg-meeting-centre/package/" . "bstg-source/")
  ("/Users/szymon/Documents/pkg-meeting-centre/" . "package/")
  ("/Users/szymon/Documents/" . "pkg-home/")
- ("/Users/szymon/" . ".emacs.d/")
+ ("/Users/szymon/" . "Documents/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/szymon/.emacs.d/"
- "/Users/szymon/Documents/pkg-home/package/bstg-source/"
  "/Users/szymon/Documents/pkg-home/package/bstg-template/"
- "/Users/szymon/Documents/pkg-meeting-centre/package/bstg-source/"
- "/Users/szymon/Documents/pkg-home/package/blueprint/"
- "/Users/szymon/.emacs.d/settings/"
- "/Users/szymon/.emacs.d/snippets/js-mode/"
+ "/Users/szymon/Documents/pkg-home/package/bstg-source/"
+ "/Users/szymon/Documents/pkg-can/package/navs/"
+ "/Users/szymon/Documents/pkg-home/package/appscripts/lib/utils/"
+ "/Users/szymon/"
+ "/Users/szymon/Documents/pkg-home/package/appscripts/home/"
+ "/Users/szymon/Documents/pkg-can/package/appscripts/can/"
+ "/Users/szymon/Documents/pkg-home/package/appscripts/lib/home/"
  "/Users/szymon/Documents/pkg-home/package/home-config/"
+ "/Users/szymon/.emacs.d/"
+ "/Users/szymon/Documents/pkg-can/package/appscripts/lib/can/"
+ "/Users/szymon/Documents/pkg-home/package/blueprint/"
+ "/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/"
+ "/Users/szymon/Documents/tool-local-system/rcouch/etc/"
+ "/Users/szymon/Documents/pkg-home/package/navs/"
+ "/Users/szymon/Documents/pkg-home/package/"
+ "/Users/szymon/Documents/pkg-home-tests/package/"
+ "/Users/szymon/Documents/pkg-home-tests/package/home-config/"
+ "/Users/szymon/Documents/forms2/"
+ "/Users/szymon/Documents/pkg-home-tests/"
+ "/Users/szymon/Documents/home-master/"
+ "/Users/szymon/.emacs.d/snippets/js-mode/"
+ "/Users/szymon/Documents/pkg-meeting-centre/package/"
+ "/Users/szymon/Documents/"
+ "/Users/szymon/Documents/pkg-home-preprod/package/"
+ "/Users/szymon/Documents/pkg-home-preprod/package/home-config/"
+ "/Users/szymon/Documents/pkg-home/package/appscripts/lib/survey/"
+ "/Users/szymon/Documents/pkg-home/package/appscripts/lib/profile/"
+ "/Users/szymon/.emacs.d/snippets/css-mode/"
+ "/Users/szymon/Downloads/"
+ "/Users/szymon/.emacs.d/settings/"
+ "/Users/szymon/Documents/pkg-meeting-centre/package/bstg-source/"
  "/Users/szymon/.emacs.d/snippets/js3-mode/"
  "/Users/szymon/.emacs.d/elpa/js3-mode-20140805.1529/"
- "/Users/szymon/Documents/pkg-home/package/"
- "/Users/szymon/Documents/pkg-home/package/navs/"
  "/Users/szymon/Documents/pkg-recommendations/package/"
  "/Users/szymon/Documents/pkg-meeting-centre/package/metadata/"
  "/Users/szymon/Documents/pkg-meeting-centre/package/handlers/meeting-centre/"
  "/Users/szymon/Documents/pkg-meeting-centre/package/js/gathering/"
  "/Users/szymon/Documents/tool-local-system/conf/"
- "/Users/szymon/Documents/pkg-meeting-centre/package/"
  "/Users/szymon/.emacs.d/elpa/abc-mode-20140225.944/"
  "/Users/szymon/.emacs.d/tern/emacs/"
  "/Users/szymon/Documents/pkg-meeting-centre/package/navs/"
@@ -55,35 +90,171 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "home-editor-block-editor-directive.js"
- "home-editor-layout-service.js"
+ "home-image-fragment-config.html"
+ "home-text-fragment-preview-controller.js"
+ "home-image-fragment-preview-controller.js"
+ "home-editor-fragment-editor-directive.js"
+ "home-editor-fragment-editor.html"
+ "home-editor-block-editor.html"
  "home-editor.css"
- "meeting-scheduler-gathering-directive.js"
- "home-editor-layout.html"
- "home-editor-layout-directive.js"
- "home-editor-block-service.js"
- "home-editor-condition-service.js"
- "blueprint.json"
+ "home-text-fragment-config.html"
+ "home-text-fragment-config-controller.js"
+ "home-image-fragment-preview.html"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/szymon/.emacs.d/" (21901 33022 0 0) "url/" "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "backups/" "backup/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitmodules" ".gitignore" ".git/" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/bstg-template/" (21934 25018 0 0) "home-view-theming-options.html" "home-text-fragment-preview.html" "home-text-fragment-config.html" "home-label-theming-options.html" "home-image-theming-options.html" "home-image-fragment-preview.html" "home-image-fragment-config.html" "home-fragment-appearance-editor.html" "home-editor.html" "home-editor.css" "home-editor-select-row-modal.html" "home-editor-layouts-list.html" "home-editor-layout.html" "home-editor-layout-select.html" "home-editor-layout-part.html" "home-editor-layout-editor.html" "home-editor-generic-condition.html" "home-editor-generic-block-preview.html" "home-editor-generic-block-config.html" "home-editor-fragment-editor.html" "home-editor-editor.html" "home-editor-conditions.html" "home-editor-block-editor.html" "home-editor-actions-editor.html" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21901 32937 0 0) "home-generic-block-builder-service.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-name-form-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/bstg-source/" (21934 24340 0 0) "home-view-theming-options-directive.js" "home-text-fragment-preview-controller.js" "home-text-fragment-config-controller.js" "home-label-theming-options-directive.js" "home-image-theming-options-directive.js" "home-image-fragment-preview-controller.js" "home-image-fragment-config-controller.js" "home-generic-block-builder-service.js" "home-editor-utils.js" "home-editor-select-row-modal-directive.js" "home-editor-layouts-list-directive.js" "home-editor-layout-service.js" "home-editor-layout-select-directive.js" "home-editor-layout-editor-directive.js" "home-editor-layout-directive.js" "home-editor-generic-block-preview-controller.js" "home-editor-fragment-editor-directive.js" "home-editor-editor-directive.js" "home-editor-controller.js" "home-editor-conditions-directive.js" "home-editor-condition-service.js" "home-editor-block-service.js" "home-editor-block-editor-directive.js" "home-editor-actions-editor-directive.js" "../" "./")
 
- ("/Users/szymon/" (21901 32943 0 0) "tut.el" "tt.txt~" "tt.txt" "tmp/" "t.txt" "Public/" "Pictures/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bashrc~" ".bash_profile~" ".bash_profile" ".bash_history" ".avidemux6/" ".atom/" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/navs/" (21934 11087 0 0) "nav_home.json" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/bstg-template/" (21901 31511 0 0) "home-generic-fragment.html" "home-editor.html" "home-editor.css" "home-editor-layouts-list.html" "home-editor-layout.html" "home-editor-layout-select.html" "home-editor-layout-part.html" "home-editor-layout-name-form.html" "home-editor-layout-editor.html" "home-editor-conditions.html" "home-editor-block-editor.html" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/home-config/" (21934 12052 0 0) "home_templates.json" "home_layout_rows.json" "home_fragments.json" "home_default_layouts.json" "home_conditions.json" "home_blocks.json" "../" "./")
 
- ("/Users/szymon/.emacs.d/settings/" (21901 8217 0 0) "setup-yasnippet.el" "setup-package.el" "../" "./")
+ ("/Users/szymon/" (21934 12289 0 0) "todo-surveys.org" "todo-home.org" "tmp/" "rest2.rest" "rest" "Public/" "Pictures/" "node_modules/" "Music/" "Movies/" "Lightworks/" "Library/" "kdenlive/" "jahstorage/" "home-use-cases.org" "Google Drive/" "Dropbox (SpotMe)/" "Dropbox (Personal)/" "Downloads/" "Documents/" "Desktop/" "Applications/" "app-steve.txt" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-SZY-5.0.5" ".zcompdump-Stephen’s MacBook Air-5.0.5" ".WebStorm10/" ".viminfo" ".v8flags.3.14.5.9.szymon.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".slap/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm/" ".node-gyp/" ".MCTranscodingSDK/" ".local/" ".kanso/" ".jspm/" ".gpg-agent-info" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".cache/" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/blueprint/" (21901 6546 0 0) "blueprint.json" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/utils/" (21934 11087 0 0) "home-templates.js" "deep-extend.js" "appearance.js" "../" "./")
 
- ("/Users/szymon/.emacs.d/snippets/js-mode/" (21900 65285 0 0) "oeach.yasnippet" "con.yasnippet" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/blueprint/" (21934 12012 0 0) "blueprint.json" "../" "./")
 
- ("/Users/szymon/.emacs.d/snippets/" (21900 11354 0 0) "js3-mode/" "js-mode/" "../" "./")
+ ("/Users/szymon/Documents/pkg-home/package/" (21934 11087 0 0) "pkg.json" "navs/" "metadata/" "main-config/" "home-config/" "bstg-template/" "bstg-source/" "blueprint/" "appscripts/" "../" "./")
+
+ ("/Users/szymon/Downloads/" (21934 5565 0 0) "Symbols.jpg" "invoice-szymon-wygnanski-may-21-june-19-2015.docx" "invoice-szymon-wygnanski-april-23-may-20-2015.docx" "fvat-06-2015.pdf" "fvat-04-2015.zip" "faktura_2_5_2015_25-05-2015.pdf" "bed372c440683d6896841297520aaec8.jpeg" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/szymon/Documents/" (21933 62546 0 0) "tukan/" "tool-local-system/" "test/" "spotme3-mobile-ios/" "spotme-webapp/" "slap/" "sel.itermcolors" "rozliczenie-podatki-manueal.xlsx" "rezygnacja.html" "pkg-webapp-skeleton/" "pkg-test/" "pkg-spotman-menu-editor/" "pkg-recommendations.zip" "pkg-recommendations/" "pkg-online-only-participants/" "pkg-navs-skeleton/" "pkg-meetings/" "pkg-meeting-centre/" "pkg-lib-doc-statuses/" "pkg-home-tests/" "pkg-home-banners/" "pkg-home/" "pkg-can/" "pkg-api-shocklogic/" "pkg-agenda/" "pkg-abstracts/" "photohire.me/" "opro.xlsx" "Microsoft User Data/" "meeting-scheduler/" "kopalniazycia.pl/" "iso.png" "iso.jpg" "gaad/" "forms2/" "fc/" "dependency-resolver/" "consultancy-fee-calculation-for-invoice-1-5-2015.docx" "Calculation of consultancy fee for April 23 2015.docx" ".DS_Store" "../" "./")
+
+ ("/Users/szymon/.emacs.d/" (21933 7163 0 0) "tramp" "snippets/" "settings/" "init.el" "ido.last" "elpa/" "backups/" "autosave/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/can/" (21933 7161 0 0) "can-url.js" "can-retriever.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/home/" (21933 1500 0 0) "imagelist-fragment-retriever.js" "home-text-retriever.js" "home-template-retriever.js" "home-image-retriever.js" "current-blocks.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/home/" (21932 63712 0 0) "event-conditions.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/metadata/" (21932 46423 0 0) "home_image.json" "../" "./")
+
+ ("/Users/szymon/.emacs.d/backups/" (21900 11354 0 0) "!Users!szymon!.emacs.d!ido.last~" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/meeting_centre/lists/" (21863 3265 0 0) "filter_meetings.js" "filter_gatherings.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/lib/can/" (21928 60451 0 0) "canlib.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/lib/" (21928 60451 0 0) "can/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/navs/" (21928 60744 0 0) "nav_video.json" "nav_documentlibrary.json" "nav_document.json" "nav_audio.json" "home_fragments.json" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/appscripts/" (21928 60451 0 0) "lib/" "can/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/package/" (21928 60451 0 0) "view/" "templates/" "registry/" "pkg.json" "navs/" "metadata/" "handlers/" "ddocs/" "bstg-sources/" "bstg-docs/" "blueprint/" "appscripts/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-can/" (21928 60451 0 0) "test.js" "README.md" "package/" "migrate.py" "CHANGELOG.md" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/rcouch/etc/" (21928 61838 0 0) "vm.args" "local.ini" "couch.ini" "app.config" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/static/" (21928 63608 0 0) "scss/" "partials/" "login.css" "login/" "img/" "font/" "css/" "3rdparty/" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/static/partials/" (21928 63608 0 0) "wizards/" "version.jade" "undefined-module-template.jade" "table-cells/" "spotme-support-form.jade" "popup-support-hotspot.jade" "node-offline.jade" "navbar.jade" "nav-editors/" "login.jade" "iframe-spotlet-container.jade" "home.jade" "help-content/" "footer.jade" "event-licenses.jade" "event-instance-selection.jade" "crud-views/" "context-navbar-top.jade" "context-headings/" "components/" "accredited-deeplink-generator.jade" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/static/partials/crud-views/" (21928 63608 0 0) "view-user-profile.jade" "view-pax.jade" "view-org.jade" "view-generic.jade" "view-generic-with-asset-preview.jade" "view-event.jade" "upload-generic.jade" "upload-generic-with-new-flow.jade" "repl-settings.jade" "manage-metadata-for-type.jade" "manage-features.jade" "manage-app-assets.jade" "list-sessions.jade" "list-pax.jade" "list-orgs.jade" "list-generic.jade" "import-sessions.jade" "import-pax.jade" "import-generic.jade" "general-excel-import.jade" "edit-participant-invitation-email.jade" "edit-nav-spotman.jade" "edit-module-preferences.jade" "create-user.jade" "create-session.jade" "create-pax.jade" "create-org.jade" "create-generic.jade" "create-generic-with-asset-upload.jade" "create-event.jade" "create-event-summary.jade" "create-event-instance.jade" "configure-event.jade" "configure-event-team.jade" "add-user-team-permission.jade" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/src/angular/" (21928 63608 0 0) "services/" "filters.coffee" "directives/" "controllers/" "app.coffee" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/src/angular/controllers/" (21928 63608 0 0) "widgets.coffee" "users.coffee" "support.coffee" "pax.coffee" "orgs.coffee" "navs.coffee" "misc.coffee" "main.coffee" "home.coffee" "help.coffee" "features.coffee" "events.coffee" "data.coffee" "crud.coffee" "agenda.coffee" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-router/" (21826 21385 0 0) "test/" "src/" "README.md" "package.json" "node_modules/" "lib/" "app.js" "app.coffee" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/src/" (21928 64683 0 0) "table-utils.coffee" "slugify-utils.coffee" "object-utils.coffee" "init.coffee" "functional-utils.coffee" "fp-i18n-utils.coffee" "blueprint-utils.coffee" "angular/" ".#blueprint-utils.coffee" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/" (21928 63608 0 0) "watchmedo.sh" "tools/" "tests/" "subl-build.sh" "static-debug/" "static/" "src/" "scripts.jade" "README.md" "packages/" "mixins.jade" "lib/" "kanso.json" "index.jade" "favicons.jade" "CHANGELOG.md" ".sass-cache/" ".kansorc" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/src/angular/services/" (21928 62808 0 0) "urlService.coffee" "uiService.coffee" "timeService.coffee" "taskExecutorService.coffee" "settingsService.coffee" "recentPlacesService.coffee" "packagesService.coffee" "orgService.coffee" "navsService.coffee" "metadataService.coffee" "main.coffee" "localStorageService.coffee" "i18nService.coffee" "handlerService.coffee" "fieldFormatterService.coffee" "eventService.coffee" "dynamicExtensionsService.coffee" "deeplinkService.coffee" "crmService.coffee" "cookiesService.coffee" "clipboardService.coffee" "bundlesService.coffee" "bulkUpdateService.coffee" "blueprintService.coffee" "authService.coffee" "assetsService.coffee" "accountService.coffee" ".#metadataService.coffee" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/rcouch/" (21675 37803 0 0) "share/" "run/" "releases/" "log/" "lib/" "etc/" "erts-6.3/" "data/" "bin/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-tests/package/home-config/" (21927 52330 0 0) "home_fragments.json" "home_conditions.json" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/" (21927 32093 0 0) "roadmap.md" "new_blocks_home_screen_data/" "Icon
+" "Getting Started.pdf" "20150913_ESCON15_Brussels/" "20150712_ICRSM15_Amsterdam/" "2015.06.03-04 - European Commission eudevdays 15 Brussels/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/" (21926 6129 0 0) "utils/" "home/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-tests/package/" (21927 28926 0 0) "pkg.json" "home-config/" "appscripts/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-tests/package/appscripts/" (21927 28932 0 0) "home/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-tests/package/appscripts/home/" (21927 29427 0 0) "profile-fragment-retriever.js" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/20150913_ESCON15_Brussels/TechnicalRealm/" (21925 10479 0 0) "theme/" "silhouette/" "env-sandbox.sh" "env-production.sh" "env-commands.sh" "build" "branding/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/" (21926 6129 0 0) "lib/" "home/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-tests/" (21926 11960 0 0) "test/" "README.md" "package/" "CHANGELOG.md" ".gitignore" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/" (21926 6129 0 0) "README.md" "package/" "CHANGELOG.md" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/home-master/" (21926 1538 0 0) "README.md" "package/" "CHANGELOG.md" ".gitignore" ".git/" ".#CHANGELOG.md" "../" "./")
+
+ ("/Users/szymon/Documents/forms2/" (21924 56478 0 0) "todo-home.org" "forms.js" "forms-2.0.pptx" "../" "./")
+
+ ("/Users/szymon/.emacs.d/snippets/js-mode/" (21918 30160 0 0) "svar.yasnippet" "Oeach.yasnippet" "Odefs.yasnippet" "Odef.yasnippet" "Ocr.yasnippet" "impl.yasnippet" "fun.yasnippet" "con.yasnippet" "cobj.yasnippet" "../" "./")
+
+ ("/Users/szymon/.emacs.d/webkit/" (21918 19989 0 0) "xutils.py" "webkit.el" "utils.py" "theme.css" "send_key.py" "helm-webkit.el" "browser.py" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/profile/" (21915 61764 0 0) "hasprofiletocomplete.js" "hasphoto.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/survey/" (21915 61764 0 0) "hassurvey.js" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/20150712_ICRSM15_Amsterdam/TechnicalRealm/silhouette/" (21916 54042 0 0) "tiles/" "postevent/" "overrides/" "navs/" "live-themes/" "i18n/" "config-files/" "_package/" ".DS_Store" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/20150712_ICRSM15_Amsterdam/TechnicalRealm/silhouette/navs/" (21915 58098 0 0) "nav_takeselfie.json" "nav_spotman.json" "nav_personlist_staff.json" "nav_personlist_researchers.json" "nav_personlist_be.json" "nav_personlist2.json" "nav_newmeeting.json" "nav_myagenda.json" "nav_meetings.json" "nav_credits.json" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/20150712_ICRSM15_Amsterdam/TechnicalRealm/" (21915 58088 0 0) "update-store-info" "theme/" "store/" "silhouette/" "packages/" "env-sandbox.sh" "env-production.sh" "env-commands.sh" "build" "branding/" "../" "./")
+
+ ("/Users/szymon/Dropbox (SpotMe)/20150712_ICRSM15_Amsterdam/" (21915 58087 0 0) "TechnicalRealm/" "SpotMeData/" "PosteventData/" "OrganizersData/" "Network/" "Icon
+" "Exports/" "EVENT_NAME_Event_Costs_Billing.xlsx" "Admin/" ".idea/" ".dropbox" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/package/home-config/" (21910 26166 0 0) "home_templates_registry.json" "home_layout_rows.json" "home_fragments.json" "home_default_layouts.json" "home_conditions.json" "home_blocks.json" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/package/" (21910 26105 0 0) "pkg.json" "navs/" "main-config/" "i18n/" "home-config/" "gfx/" "bstg-template/" "bstg-source/" "blueprint/" "appscripts/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/package/appscripts/lib/home/" (21910 24167 0 0) "event-conditions.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/package/appscripts/lib/" (21910 23975 0 0) "utils/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/package/appscripts/home/" (21910 24087 0 0) "imagelist-fragment-retriever.js" "home-template-retriever.js" "current-blocks.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home-preprod/" (21910 23975 0 0) "README.md" "package/" "CHANGELOG.md" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-test/package/home-config/" (21909 1043 0 0) "home_fragments.json" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-test/package/" (21909 967 0 0) "pkg.json" "home-config/" "../" "./")
+
+ ("/Users/szymon/Documents/tool-local-system/conf/" (21882 42020 0 0) "system.json" "standalone.json" "bundleservice.json" "appservice.json" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-test/" (21909 850 0 0) "test/" "README.md" "package/" "CHANGELOG.md" ".gitignore" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/lib/filtering/" (21892 16504 0 0) "filteringlib2.js" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-home/package/appscripts/agenda/" (21892 16504 0 0) "timeframe.js" "../" "./")
+
+ ("/Users/szymon/.emacs.d/elpa/tern-20150527.305/" (21906 48548 0 0) "tern.elc" "tern.el" "tern-pkg.elc" "tern-pkg.el" "tern-autoloads.el" "../" "./")
+
+ ("/Users/szymon/.emacs.d/elpa/" (21906 46414 0 0) "yasnippet-20150415.244/" "tern-auto-complete-20150611.639/" "tern-20150527.305/" "smartparens-20150603.948/" "smart-tab-20150327.2059/" "skewer-mode-20150422.1818/" "simple-httpd-20150430.1755/" "s-20140910.334/" "restclient-20150513.131/" "popup-20150609.2145/" "multiple-cursors-20150528.2303/" "magit-20150608.1139/" "know-your-http-well-20140608.308/" "js2-mode-20150524.426/" "ido-vertical-mode-20150623.1410/" "ido-at-point-20141210.2314/" "grizzl-20150312.1043/" "git-rebase-mode-20150122.1114/" "git-commit-mode-20150330.1048/" "flx-ido-20140821.2033/" "flx-20140921.739/" "fiplr-20140723.2345/" "expand-region-20150525.205/" "emmet-mode-20150410.803/" "dired-details-20130824.1158/" "dash-functional-20150311.2358/" "dash-20150611.922/" "darcula-theme-20150625.631/" "company-tern-20150525.216/" "company-restclient-20150127.647/" "company-20150629.840/" "auto-complete-20150618.1949/" "archives/" "ac-js2-20140906.442/" "../" "./")
+
+ ("/Users/szymon/.emacs.d/elpa/company-restclient-20150127.647/" (21906 46414 0 0) "company-restclient.elc" "company-restclient.el" "company-restclient-pkg.elc" "company-restclient-pkg.el" "company-restclient-autoloads.el~" "company-restclient-autoloads.el" "../" "./")
+
+ ("/Users/szymon/.emacs.d/snippets/css-mode/" (21906 36604 0 0) "transi.yasnippet" "transf.yasnippet" "box-sha.yasnippet" "border-ra.yasnippet" "../" "./")
+
+ ("/Users/szymon/.emacs.d/snippets/" (21906 33506 0 0) "js3-mode/" "js2-mode/" "js-mode/" "css-mode/" "../" "./")
+
+ ("/Users/szymon/.emacs.d/settings/" (21905 12945 0 0) "setup-yasnippet.el" "setup-package.el" "../" "./")
+
+ ("/Users/szymon/Documents/tukan/" (21905 9584 0 0) "img/" "../" "./")
+
+ ("/Users/szymon/Documents/Microsoft User Data/" (21823 32175 0 0) "Office 2011 Identities/" "../" "./")
+
+ ("/Users/szymon/Documents/pkg-meeting-centre/package/bstg-source/" (21901 33021 0 0) "meeting-scheduler-time-service.js" "meeting-scheduler-sync-manager.js" "meeting-scheduler-people-service.js" "meeting-scheduler-pending-meetings-directive.js" "meeting-scheduler-meeting-request.js" "meeting-scheduler-gathering.js" "meeting-scheduler-gathering-service.js" "meeting-scheduler-gathering-form-directive.js" "meeting-scheduler-gathering-directive.js" "meeting-scheduler-dev-tools-directive.js" "meeting-scheduler-days-directive.js" "meeting-scheduler-day.js" "meeting-scheduler-controller.js" "meeting-scheduler-conflict-detector-service.js" "meeting-centre-export-controller.js" "angular-range-slider.js" "../" "./")
 
  ("/Users/szymon/.emacs.d/elpa/js3-mode-20140805.1529/" (21900 14634 0 0) "js3.elc" "js3.el" "js3-mode.elc" "js3-mode.el" "js3-mode-pkg.el" "js3-mode-autoloads.el~" "js3-mode-autoloads.el" "../" "./")
 
@@ -91,29 +262,17 @@
 
  ("/Users/szymon/.emacs.d/elpa/yasnippet-20150415.244/" (21900 14376 0 0) "yasnippet.elc" "yasnippet.el" "yasnippet-pkg.el" "yasnippet-autoloads.el~" "yasnippet-autoloads.el" "snippets/" "../" "./")
 
- ("/Users/szymon/Documents/pkg-home/package/" (21900 7977 0 0) "pkg.json" "navs/" "main-config/" "home-config/" "gfx/" "ddocs/" "bstg-template/" "bstg-source/" "blueprint/" "appscripts/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-home/package/home-config/" (21900 6568 0 0) "home_templates_registry.json" "home_fragments_registry.json" "home_conditions.json" "home_blocks_preevent.json" "home_blocks_postevent.json" "home_blocks_atevent.json" "home_blocks.json" "../" "./")
-
  ("/Users/szymon/.emacs.d/elpa/auto-complete-20150618.1949/" (21899 64031 0 0) "dict/" "auto-complete.elc" "auto-complete.el" "auto-complete-pkg.el" "auto-complete-config.elc" "auto-complete-config.el" "auto-complete-autoloads.el" "../" "./")
-
- ("/Users/szymon/.emacs.d/elpa/" (21899 54838 0 0) "tern-auto-complete-20150611.639/" "tern-20150527.305/" "skewer-mode-20150422.1818/" "simple-httpd-20150430.1755/" "s-20140910.334/" "popup-20150609.2145/" "multiple-cursors-20150526.7/" "json-snatcher-20150511.2047/" "json-reformat-20150406.1705/" "json-mode-20150413.1948/" "js3-mode-readme.txt" "js3-mode-20140805.1529/" "js2-mode-20150524.426/" "ido-ubiquitous-20150423.1037/" "ido-completing-read+-20150423.1037/" "dash-functional-20150311.2358/" "dash-20150611.922/" "darcula-theme-20150622.708/" "company-tern-20150525.216/" "company-20150605.253/" "auto-complete-20150615.34/" "archives/" "ac-js2-readme.txt" "ac-js2-20140906.442/" "abc-mode-20140225.944/" "../" "./")
 
  ("/usr/local/Cellar/emacs/24.5/share/info/emacs/" (21860 29734 0 0) "woman.info.gz" "wisent.info.gz" "widget.info.gz" "viper.info.gz" "vip.info.gz" "url.info.gz" "tramp.info.gz" "todo-mode.info.gz" "srecode.info.gz" "speedbar.info.gz" "smtpmail.info.gz" "sieve.info.gz" "ses.info.gz" "semantic.info.gz" "sc.info.gz" "sasl.info.gz" "remember.info.gz" "reftex.info.gz" "rcirc.info.gz" "pgg.info.gz" "pcl-cvs.info.gz" "org.info.gz" "octave-mode.info.gz" "nxml-mode.info.gz" "newsticker.info.gz" "mh-e.info.gz" "message.info.gz" "mairix-el.info.gz" "info.info.gz" "ido.info.gz" "idlwave.info.gz" "htmlfontify.info.gz" "gnus.info.gz" "forms.info.gz" "flymake.info.gz" "eww.info.gz" "eudc.info.gz" "eshell.info.gz" "ert.info.gz" "erc.info.gz" "epa.info.gz" "emacs.info.gz" "emacs-mime.info.gz" "emacs-gnutls.info.gz" "elisp.info.gz" "eintr.info.gz" "eieio.info.gz" "efaq.info.gz" "edt.info.gz" "ediff.info.gz" "ede.info.gz" "ebrowse.info.gz" "dired-x.info.gz" "dir" "dbus.info.gz" "cl.info.gz" "ccmode.info.gz" "calc.info.gz" "bovine.info.gz" "autotype.info.gz" "auth.info.gz" "ada-mode.info.gz" "../" "./")
 
  ("/Users/" (21893 44613 0 0) "szymon/" "Shared/" ".localized" "../" "./")
-
- ("/Users/szymon/Documents/pkg-home/package/navs/" (21892 16504 0 0) "nav_spotman.json" "nav_home.json" "../" "./")
 
  ("/Users/szymon/Documents/pkg-meeting-centre/package/js/gathering/" (21892 16544 0 0) "page.js" "../" "./")
 
  ("/Users/szymon/Documents/pkg-meeting-centre/package/handlers/meeting-centre/" (21892 16544 0 0) "search-pax.js" "purge.js" "gatherings-pdf.js" "doublemetaphone.js" "add-gathering-notification.js" "../" "./")
 
  ("/Users/szymon/Documents/FXhome/" (21889 54826 0 0) "HitFilm 2 Express/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-home/" (21892 16504 0 0) "README.md" "package/" "CHANGELOG.md" ".idea/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/szymon/Documents/" (21889 56322 0 0) "~$rozliczenie-podatki-manueal.xlsx" "tool-local-system/" "test/" "spotme-webapp/" "slap/" "sel.itermcolors" "rozliczenie-podatki-manueal.xlsx" "rezygnacja.html" "pkg-webapp-skeleton/" "pkg-spotman-menu-editor/" "pkg-recommendations.zip" "pkg-recommendations/" "pkg-online-only-participants/" "pkg-navs-skeleton/" "pkg-meetings/" "pkg-meeting-centre/" "pkg-lib-doc-statuses/" "pkg-home/" "pkg-api-shocklogic/" "pkg-agenda/" "pkg-abstracts/" "photohire.me/" "Microsoft User Data/" "meeting-scheduler/" "kopalniazycia.pl/" "gaad/" "FXhome/" "fc/" "dependency-resolver/" "consultancy-fee-calculation-for-invoice-1-5-2015.docx" "Calculation of consultancy fee for April 23 2015.docx" "biznes-host.pl_panel_vat.pdf" ".localized" ".lightworks.thereCanBeOnlyOne" ".idea/" ".DS_Store" "../" "./")
 
  ("/Users/szymon/Documents/pkg-recommendations/package/registry/" (21896 4654 0 0) "registry.json" "../" "./")
 
@@ -131,19 +290,13 @@
 
  ("/Users/szymon/Documents/pkg-meeting-centre/package/navs/" (21891 45478 0 0) "nav_spotman.json" "nav_request_meeting.json" "nav_meetings_list.json" "nav_meetings_agenda.json" "nav_main_menu_standard.json" "nav_main_menu.json" "../" "./")
 
- ("/Users/szymon/Documents/pkg-meeting-centre/package/bstg-source/" (21891 45478 0 0) "meeting-scheduler-time-service.js" "meeting-scheduler-sync-manager.js" "meeting-scheduler-people-service.js" "meeting-scheduler-pending-meetings-directive.js" "meeting-scheduler-meeting-request.js" "meeting-scheduler-gathering.js" "meeting-scheduler-gathering-service.js" "meeting-scheduler-gathering-form-directive.js" "meeting-scheduler-gathering-directive.js" "meeting-scheduler-dev-tools-directive.js" "meeting-scheduler-days-directive.js" "meeting-scheduler-day.js" "meeting-scheduler-controller.js" "meeting-scheduler-conflict-detector-service.js" "meeting-centre-export-controller.js" "angular-range-slider.js" "../" "./")
-
  ("/Users/szymon/Documents/pkg-meeting-centre/" (21891 45478 0 0) "tsconfig.json" "todo.md" "test/" "README.md" "package/" "CHANGELOG.md" ".jshintrc" ".idea/" ".gitignore" ".git/" "../" "./")
 
  ("/Users/szymon/Documents/pkg-meeting-centre/package/" (21891 45478 0 0) "templates/" "registry/" "pkg.json" "navs/" "metadata/" "js/" "i18n/" "hooks/" "handlers/" "ddocs/" "bstg-template/" "bstg-source/" "blueprint/" "../" "./")
 
- ("/Users/szymon/Documents/tool-local-system/conf/" (21882 42020 0 0) "system.json" "standalone.json" "bundleservice.json" "appservice.json" "../" "./")
-
  ("/Users/szymon/Documents/tool-local-system/" (21826 35475 0 0) "update-backstage.sh" "stop-nginx.sh" "start-node.sh" "start-nginx.sh" "spotme-server/" "README.md" "rcouch.zip" "rcouch/" "nginx/" "Makefile" "debug-node.sh" "conf/" "build-rcouch.sh" "build-nodehandler.sh" "build-nginx.sh" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/szymon/Documents/tool-local-system/spotme-server/" (21826 35370 0 0) "spotme3-node-standalonenode/" "spotme3-node-pkg-repo/" "spotme3-node-libnode/" "spotme3-node-auth/" "spotme3-infra-mdm/" "spotme3-infra-ds/" "spotme3-infra-bundle-service/" "spotme3-infra-as/" "replication-api/" "lib-packaging/" "lib-leatherman/" "capsule/" "backstage-session-cookies/" "backstage-router/" "backstage-app/" "backstage-api-module/" ".nvm/" "../" "./")
-
- ("/Users/szymon/Documents/tool-local-system/spotme-server/backstage-app/" (21888 8882 0 0) "watchmedo.sh" "tools/" "tests/" "subl-build.sh" "static-debug/" "static/" "src/" "scripts.jade" "README.md" "packages/" "mixins.jade" "lib/" "kanso.json" "index.jade" "favicons.jade" "CHANGELOG.md" ".sass-cache/" ".kansorc" ".gitignore" ".git/" "../" "./")
 
  ("/Users/szymon/.emacs.d/elpa/auto-complete-20150615.34/" (21887 59324 0 0) "dict/" "auto-complete.elc" "auto-complete.el" "auto-complete-pkg.el" "auto-complete-config.elc" "auto-complete-config.el" "auto-complete-autoloads.el" "../" "./")
 
@@ -152,28 +305,6 @@
  ("/Users/szymon/.emacs.d/tern/emacs/" (21887 57255 0 0) "tern.el" "tern-auto-complete.el" "../" "./")
 
  ("/Users/szymon/.emacs.d/tern/" (21887 57317 0 0) "test/" "README.md" "plugin/" "package.json" "node_modules/" "LICENSE" "lib/" "index.html" "emacs/" "doc/" "defs/" "CONTRIBUTING.md" "bin/" "AUTHORS" ".travis.yml" ".tern-project" ".no-sublime-package" ".jshintrc" ".gitignore" ".git/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-recommendations/" (21881 25561 0 0) "todo.md" "test/" "README.md" "package/" "keywords.xlsx" "keywords.csv" "ESOT2015-features-v1-1-2.pptx" "CHANGELOG.md" ".jshintrc" ".idea/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meeting-centre/package/js/" (21849 52373 0 0) "potem.js" "meeting/" "gathering/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meetings/" (21841 46629 0 0) "todo.md" "README.md" "package/" "migrate.py" "CHANGELOG.md" ".idea/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/szymon/Dropbox (SpotMe)/20150913_ESCON15_Brussels/TechnicalRealm/" (21869 61921 0 0) "theme/" "silhouette/" "env-sandbox.sh" "env-production.sh" "env-commands.sh" "build" "branding/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/meeting_centre/lists/" (21863 3265 0 0) "filter_meetings.js" "filter_gatherings.js" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/meeting_centre/" (21844 36322 0 0) "views/" "lists/" "language" "fp_owner" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meeting-centre/package/ddocs/" (21855 8071 0 0) "victorinox/" "meeting_centre/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-meeting-centre/package/handlers/" (21853 38954 0 0) "meeting-centre/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-recommendations/package/handlers/" (21860 33418 0 0) "recommendations/" "../" "./")
-
- ("/Users/szymon/Documents/pkg-recommendations/package/navs/" (21860 33278 0 0) "nav_main_menu.json" "../" "./")
-
- ("/Users/szymon/.emacs.d/elpa/ido-ubiquitous-20150423.1037/" (21860 32666 0 0) "ido-ubiquitous.elc" "ido-ubiquitous.el" "ido-ubiquitous-pkg.elc" "ido-ubiquitous-pkg.el" "ido-ubiquitous-autoloads.el" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
