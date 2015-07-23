@@ -153,6 +153,8 @@
  '(js2-enter-indents-newline t)
  '(js2-indent-level 4)
  '(js2-indent-on-enter-key t)
+ '(js2-mode-show-strict-warnings t)
+ '(js2-strict-inconsistent-return-warning nil)
  '(js2-strict-trailing-comma-warning nil)
  '(org-agenda-files (quote ("~/todo-home.org"))))
 
