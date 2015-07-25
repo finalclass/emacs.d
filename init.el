@@ -20,6 +20,7 @@
   (package-install 'emmet-mode)
   (package-install 'company-restclient)
   (package-install 'ac-js2)
+  (package-install 'yasnippet)
   (package-install 'restclient)
   )
 
@@ -225,7 +226,10 @@ If point was already at that position, move point to beginning of line."
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-					;comment
+                                        ;menubar
+(menu-bar-mode -1)
+
+                                        ;comment
 
 (defun toggle-comment-on-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
