@@ -26,6 +26,51 @@
 
 (init--install-packages)
 
+
+                                        ;next
+(setq confs-reg-switcher-position ?0)
+
+(defun confs-reg-increase-switcher-position ()
+  (if (> confs-reg-switcher-position ?9)
+      (progn (setq confs-reg-switcher-position ?0))
+    (progn (setq confs-reg-switcher-position (+ confs-reg-switcher-position 1)))))
+  
+(defun confs-reg-mode-forward ()
+  (confs-reg-increase-switcher-position)
+  (if (jump-to-register confs-reg-switcher-position)
+      ()
+    (confs-reg-mode-forward))
+  (message "%s" confs-reg-switcher-position))
+
+(defun confs-reg-decrease-switcher-position ()
+  (if (<= confs-reg-switcher-position ?0)
+      (progn (setq confs-reg-switcher-position ?9))
+    (progn (setq confs-reg-switcher-position (- confs-reg-switcher-position 1)))))
+
+(defun confs-reg-mode-backward ()
+  (confs-reg-decrease-switcher-position)
+  (if (jump-to-register confs-reg-switcher-position)
+      ()
+    (confs-reg-backward-forward))
+  (message "%s" confs-reg-switcher-position))
+
+(get-register ?1)
+
+
+(confs-reg-decrease-switcher-position)
+(insert confs-reg-switcher-position)1
+
+(confs-reg-mode-forward)
+
+
+(global-set-key (kbd "<C-S-right>") (lambda () (interactive) (confs-reg-mode-forward)))
+(global-set-key (kbd "<C-S-left>") (lambda () (interactive) (confs-reg-mode-backward)))
+
+
+
+
+                
+
                                         ;Dire
 (defun mydired-sort ()
   "Sort dired listings with directories first."
