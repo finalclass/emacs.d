@@ -222,6 +222,7 @@
 (setq-default indent-tabs-mode nil)
 
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+
 (setq ac-js2-evaluate-calls t)
 
 ;; prettify symbls are causing the problem when you place a parentisies after the function name
@@ -232,6 +233,7 @@
    ))
 
 (global-prettify-symbols-mode +1)
+(add-hook 'js2-mode-hook (lambda () (hs-minor-mode +1)))
 (add-hook 'js2-mode-hook (lambda () (prettify-symbols-mode t)))
 
 					;company
@@ -300,6 +302,30 @@ If point was already at that position, move point to beginning of line."
             (setq beg (line-beginning-position) end (line-end-position)))
         (comment-or-uncomment-region beg end)
         (next-line)))
+
+                                        ;move line up/down
+(defun move-line (n)
+  "Move the current line up or down by N lines."
+  (interactive "p")
+  (setq col (current-column))
+  (beginning-of-line) (setq start (point))
+  (end-of-line) (forward-char) (setq end (point))
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (insert line-text)
+    ;; restore point to original column in moved line
+    (forward-line -1)
+    (forward-char col)))
+
+(defun move-line-up (n)
+  "Move the current line up by N lines."
+  (interactive "p")
+  (move-line (if (null n) -1 (- n))))
+
+(defun move-line-down (n)
+  "Move the current line down by N lines."
+  (interactive "p")
+  (move-line (if (null n) 1 n)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 					;keyboard shortcuts
@@ -375,3 +401,14 @@ If point was already at that position, move point to beginning of line."
 					;duplicate line
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (put 'upcase-region 'disabled nil)
+
+                                        ;folding
+(global-set-key (kbd "C-M-<return>") 'hs-toggle-hiding)
+
+                                        ;magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+                                        ;move line up/down
+
+(global-set-key (kbd "C-S-<up>") 'move-line-up)
+(global-set-key (kbd "C-S-<down>") 'move-line-down)
