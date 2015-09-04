@@ -66,8 +66,7 @@
   (setq wc-list (delete (nth wc-position wc-list) wc-list))
   (message (concat "Window Configuration Removed @ " (number-to-string wc-position)))
   (wc-dec)
-  (wc-set-to-current)
-  )
+  (wc-set-to-current))
 
 (defun wc-inc ()
   "Increases wc-position"
