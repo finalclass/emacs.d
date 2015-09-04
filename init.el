@@ -56,7 +56,7 @@
 (defun wc-save ()
   "Saves current window configuration to the end of the 'wc-list"
   (interactive)
-  (add-to-list 'wc-list (current-window-configuration))
+  (add-to-list 'wc-list (current-window-configuration) t)
   (setq wc-position (wc-list-length))
   (message (concat "Window Configuration Saved @ " (number-to-string wc-position))))
   
