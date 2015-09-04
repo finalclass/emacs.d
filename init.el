@@ -41,44 +41,64 @@
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
 
-                                        ;next
+                                        ;next/prev window configuration
 (setq confs-reg-switcher-position ?0)
 
-(defun confs-reg-increase-switcher-position ()
-  (if (> confs-reg-switcher-position ?9)
-      (progn (setq confs-reg-switcher-position ?0))
-    (progn (setq confs-reg-switcher-position (+ confs-reg-switcher-position 1)))))
+
+(setq wc-list '())
+(setq wc-position '0)
+
+(defun wc-list-length ()
+  "Returns wc-list list length"
+  (interactive)
+  (list-length wc-list))
+
+(defun wc-save ()
+  "Saves current window configuration to the end of the 'wc-list"
+  (interactive)
+  (add-to-list 'wc-list (current-window-configuration))
+  (setq wc-position (wc-list-length))
+  (message (concat "Window Configuration Saved @ " (number-to-string wc-position))))
   
-(defun confs-reg-mode-forward ()
-  (confs-reg-increase-switcher-position)
-  (if (jump-to-register confs-reg-switcher-position)
-      ()
-    (confs-reg-mode-forward))
-  (message "%s" confs-reg-switcher-position))
+(defun wc-remove ()
+  "Removes one window configuration at current wc-position"
+  (interactive)
+  (setq wc-list (delete (nth wc-position wc-list) wc-list))
+  (message (concat "Window Configuration Removed @ " (number-to-string wc-position)))
+  (wc-dec))
 
-(defun confs-reg-decrease-switcher-position ()
-  (if (<= confs-reg-switcher-position ?0)
-      (progn (setq confs-reg-switcher-position ?9))
-    (progn (setq confs-reg-switcher-position (- confs-reg-switcher-position 1)))))
+(defun wc-inc ()
+  "Increases wc-position"
+  (interactive)
+  (setq wc-position (+ wc-position 1))
+  (if (>= wc-position (wc-list-length))
+      (setq wc-position 0)))
 
-(defun confs-reg-mode-backward ()
-  (confs-reg-decrease-switcher-position)
-  (if (jump-to-register confs-reg-switcher-position)
-      ()
-    (confs-reg-backward-forward))
-  (message "%s" confs-reg-switcher-position))
+(defun wc-set-to-current ()
+  "Sets window-configuration to current (by wc-position) element from wc-list list"
+  (interactive)
+  (message "Current position %s" wc-position)
+  (if (nth wc-position wc-list)
+      (set-window-configuration (nth wc-position wc-list))))
 
-(get-register ?1)
+(defun wc-next ()
+  "Sets window-configuration to the next element of wc-list"
+  (interactive)
+  (wc-inc)
+  (wc-set-to-current))
 
+(defun wc-dec ()
+  "Decreases wc-position (position of the wc-list list)"
+  (interactive)
+  (setq wc-position (- wc-position 1))
+  (if (< wc-position 0)
+      (setq wc-position (- (wc-list-length) 1))))
 
-(confs-reg-decrease-switcher-position)
-(insert confs-reg-switcher-position)1
-
-(confs-reg-mode-forward)
-
-
-(global-set-key (kbd "<C-S-right>") (lambda () (interactive) (confs-reg-mode-forward)))
-(global-set-key (kbd "<C-S-left>") (lambda () (interactive) (confs-reg-mode-backward)))
+(defun wc-prev ()
+  "Sets window-configuration to the previous element of wc-list current position element"
+  (interactive)
+  (wc-dec)
+  (wc-set-to-current))
 
                                         ;Dire
 (defun mydired-sort ()
@@ -140,7 +160,6 @@
 
   ;; put the point in the lowest line and return
   (next-line arg))
-
 
 					;magit
 
@@ -421,3 +440,10 @@ If point was already at that position, move point to beginning of line."
 
 (global-set-key (kbd "C-S-<up>") 'move-line-up)
 (global-set-key (kbd "C-S-<down>") 'move-line-down)
+
+                                        ;window configuratio
+
+(global-set-key (kbd "<C-S-right>") 'wc-next)
+(global-set-key (kbd "<C-S-left>") 'wc-prev)
+(global-set-key (kbd "<C-S-down>") 'wc-save)
+(global-set-key (kbd "<C-S-up>") 'wc-remove)
