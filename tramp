@@ -1,6 +1,44 @@
-;; -*- emacs-lisp -*- <15/06/25 12:31:59 /Users/szymon/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/08/04 13:47:40 /Users/szymon/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" nil "http" nil nil]
-  nil))
+((["ssh" "sel" "ibg.gda.pl" nil nil]
+  ("locale" "LC_ALL=C")
+  ("uname" "Linux 2.6.32-042stab108.3")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/sel")
+  ("file-exists" "test -e")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("readlink" "\\readlink")
+  ("gid-string" "sel")
+  ("git" "\\git"))
+ (["ssh" "sel" "photohire.me" nil nil]
+  ("locale" "LC_ALL=C")
+  ("uname" "Linux 2.6.32-042stab108.3")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/sel")
+  ("file-exists" "test -e")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("readlink" "\\readlink")
+  ("gid-string" "sel")
+  ("git" "\\git")))
