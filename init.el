@@ -46,7 +46,7 @@
 
 
 (setq wc-list '())
-(setq wc-position '0)
+(setq wc-position 0)
 
 (defun wc-list-length ()
   "Returns wc-list list length"
@@ -59,7 +59,7 @@
   (add-to-list 'wc-list (current-window-configuration) t)
   (setq wc-position (wc-list-length))
   (message (concat "Window Configuration Saved @ " (number-to-string wc-position))))
-  
+
 (defun wc-remove ()
   "Removes one window configuration at current wc-position"
   (interactive)
@@ -444,7 +444,18 @@ If point was already at that position, move point to beginning of line."
 
                                         ;window configuratio
 
-(global-set-key (kbd "<C-S-right>") 'wc-next)
-(global-set-key (kbd "<C-S-left>") 'wc-prev)
-(global-set-key (kbd "<C-S-down>") 'wc-save)
-(global-set-key (kbd "<C-S-up>") 'wc-remove)
+(global-set-key (kbd "<M-S-right>") 'wc-next)
+(global-set-key (kbd "<M-S-left>") 'wc-prev)
+(global-set-key (kbd "<M-S-down>") 'wc-save)
+(global-set-key (kbd "<M-S-up>") 'wc-remove)
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
