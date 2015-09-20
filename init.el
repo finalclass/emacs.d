@@ -15,20 +15,23 @@
   (package-install 'ido-at-point)
   (package-install 'multiple-cursors)
   (package-install 'js2-mode)
-  (package-install 'auto-complete)
   (package-install 'darcula-theme)
   (package-install 'emmet-mode)
+  (package-install 'typescript-mode)
+  (package-install 'tss)
   (package-install 'web-mode)
-  (package-install 'company-restclient)
-  (package-install 'ac-js2)
-  (package-install 'yasnippet)
   (package-install 'restclient)
+  (package-install 'exec-path-from-shell)
   )
 
 (init--install-packages)
 
                                         ;wc
 (require 'setup-wc)
+
+                                        ;fix PATH env variable on mac
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
                                         ;js-doc
 (require 'setup-js-doc)
@@ -122,6 +125,26 @@
   ;; put the point in the lowest line and return
   (next-line arg))
 
+
+                                        ;typescript
+;; If use bundled typescript.el,
+(require 'typescript)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
+(require 'tss)
+
+;; Key binding
+(setq tss-popup-help-key "C-:")
+(setq tss-jump-to-definition-key "C->")
+(setq tss-implement-definition-key "C-c i")
+
+;; Make config suit for you. About the config item, eval the following sexp.
+;; (customize-group "tss")
+
+;; Do setting recommemded configuration
+(tss-config-default)
+
+
 					;magit
 
 (setq magit-last-seen-setup-instructions "1.4.0")
@@ -166,8 +189,8 @@
              (backward-char 1))))
 
 					;shell
-
 (setenv "PATH" (concat "/usr/local/bin:" "/Users/szymon/.nvm/v0.10.38/bin:" (getenv "PATH")))
+
 
 					;zap-up-to-char
 (autoload 'zap-up-to-char "misc"
@@ -409,13 +432,3 @@ If point was already at that position, move point to beginning of line."
 (global-set-key (kbd "<M-S-down>") 'wc-save)
 (global-set-key (kbd "<M-S-up>") 'wc-remove)
 
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
