@@ -21,6 +21,7 @@
   (package-install 'tss)
   (package-install 'web-mode)
   (package-install 'restclient)
+  (package-install 'coffee-mode)
   (package-install 'exec-path-from-shell)
   )
 
