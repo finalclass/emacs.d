@@ -23,6 +23,7 @@
   (package-install 'restclient)
   (package-install 'coffee-mode)
   (package-install 'flymake-coffee)
+  (package-install 'jade-mode)
   (package-install 'exec-path-from-shell)
   )
 
