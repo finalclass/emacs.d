@@ -24,6 +24,7 @@
   (package-install 'coffee-mode)
   (package-install 'flymake-coffee)
   (package-install 'jade-mode)
+  (package-install 'markdown-mode)
   (package-install 'exec-path-from-shell)
   )
 
