@@ -26,8 +26,22 @@
 
 (init--install-packages)
 
+                                        ;elisp
+;;eval whole buffer and show message
+(defun sel-eval-buffer ()
+  (interactive)
+  (eval-buffer)
+  (message "Buffer evaluated"))
+
+(global-set-key (kbd "C-b") 'sel-eval-buffer)
+
+;;autocomplete
+(setq tab-always-indent 'complete)
+(add-to-list 'completion-styles 'initials t)
+
+
                                         ;wc
-(require 'setup-wc)
+;(require 'setup-wc)
 
                                         ;fix PATH env variable on mac
 (when (memq window-system '(mac ns))
@@ -62,6 +76,11 @@
 
                                         ;next/prev window configuration
 (setq confs-reg-switcher-position ?0)
+
+
+                                        ;grid-mode
+    
+;(require 'setup-grid)
 
 
                                         ;Dire
@@ -424,11 +443,3 @@ If point was already at that position, move point to beginning of line."
 
 (global-set-key (kbd "C-S-<up>") 'move-line-up)
 (global-set-key (kbd "C-S-<down>") 'move-line-down)
-
-                                        ;window configuratio
-
-(global-set-key (kbd "<M-S-right>") 'wc-next)
-(global-set-key (kbd "<M-S-left>") 'wc-prev)
-(global-set-key (kbd "<M-S-down>") 'wc-save)
-(global-set-key (kbd "<M-S-up>") 'wc-remove)
-

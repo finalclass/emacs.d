@@ -61,17 +61,22 @@
   ;(wc-set-to-current)
   )
 
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+(add-to-list 'wc-list (current-window-configuration) t)
+
+                                        ;keys
+
+(global-set-key (kbd "<M-S-right>") 'wc-next)
+(global-set-key (kbd "<M-S-left>") 'wc-prev)
+(global-set-key (kbd "<M-S-down>") 'wc-save)
+(global-set-key (kbd "<M-S-up>") 'wc-remove)
+
 (provide 'setup-wc)
-
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-(add-to-list 'wc-list (current-window-configuration) t)
-
-
