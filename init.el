@@ -84,7 +84,7 @@
 
                                         ;grid-mode
     
-(require 'setup-grid)
+(require 'setup-ribbon)
 
 
                                         ;Dire
