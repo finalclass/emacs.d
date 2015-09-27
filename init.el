@@ -21,6 +21,10 @@
   (package-install 'tss)
   (package-install 'web-mode)
   (package-install 'restclient)
+  (package-install 'coffee-mode)
+  (package-install 'flymake-coffee)
+  (package-install 'jade-mode)
+  (package-install 'markdown-mode)
   (package-install 'exec-path-from-shell)
   )
 
@@ -177,6 +181,10 @@
    (js . t)
    )
  )
+
+                                        ;coffee script linting
+(require 'flymake-coffee)
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
 
 					;server
 
