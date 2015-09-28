@@ -77,6 +77,6 @@
   (ribbon-describe-buffers))
 
 
-(global-set-key (kbd "C-x r") 'ribbon-mode-start)
+(global-set-key (kbd "C-x r r") 'ribbon-mode-start)
 
 (provide 'setup-ribbon)
