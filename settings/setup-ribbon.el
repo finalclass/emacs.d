@@ -22,7 +22,8 @@
 
 (defun ribbon-set-keyboard-shortcuts ()
   (global-set-key (kbd "<S-M-right>") 'ribbon-move-right)
-  (global-set-key (kbd "<S-M-left>") 'ribbon-move-left))
+  (global-set-key (kbd "<S-M-left>") 'ribbon-move-left)
+  (global-set-key (kbd "C-x t") 'ribbon-clone-buffer))
 
 (defun ribbon-split ()
   (split-window-right)
@@ -60,6 +61,11 @@
             (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
             ))
 
+(defun ribbon-clone-buffer ()
+  (interactive)
+  (set-window-buffer (next-window) (current-buffer))
+  (select-window (next-window)))
+   
 (defun ribbon-move-left ()
   (interactive)
   (ribbon-save-current-state)
