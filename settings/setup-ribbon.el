@@ -60,19 +60,24 @@
             (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
             ))
 
-
 (defun ribbon-selected-window-no ()
   (position (selected-window) ribbon-windows))
 
-(defun ribbon-select-left-window ()
-  (let ((pos (ribbon-selected-window-no)))    
-    (if (< pos 2)
-        (select-window (nth (+ pos 1) ribbon-windows)))))
+(defun ribbon-next-window ()
+  (nth (- (ribbon-selected-window-no) 1) ribbon-windows))
 
+(defun ribbon-prev-window ()
+  (nth (+ (ribbon-selected-window-no) 1) ribbon-windows))
+
+(defun ribbon-select-left-window ()
+  (let ((win (ribbon-prev-window)))
+    (if (win)
+        (select-window win))))
+  
 (defun ribbon-select-right-window ()
-  (let ((pos (ribbon-selected-window-no)))
-    (if (> pos 0)
-        (select-window (nth (- pos 1) ribbon-windows)))))
+  (let ((win (ribbon-next-window)))
+    (if (win)
+        (select-window win))))
 
 (defun ribbon-move-left ()
   (interactive)
@@ -92,7 +97,16 @@
   (ribbon-select-right-window)
   (ribbon-describe-buffers))
 
+(defun ribbon-clone-buffer-to-right ()
+  (interactive)
+  (set-window-buffer (ribbon-next-window) (current-buffer)))
+
+(defun ribbon-clone-buffer-to-left ()
+  (interactive)
+  (set-window-buffer (ribbon-prev-window) (current-buffer)))
 
 (global-set-key (kbd "C-x r r") 'ribbon-mode-start)
+(global-set-key (kbd "C-x r <right>") 'ribbon-clone-buffer-to-right)
+(global-set-key (kbd "C-x r <left>") 'ribbon-clone-buffer-to-left)
 
 (provide 'setup-ribbon)
