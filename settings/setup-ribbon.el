@@ -97,11 +97,13 @@
 
 (defun ribbon-clone-buffer-to-right ()
   (interactive)
-  (set-window-buffer (ribbon-next-window) (current-buffer)))
+  (set-window-buffer (ribbon-next-window) (current-buffer))
+  (ribbon-select-right-window))
 
 (defun ribbon-clone-buffer-to-left ()
   (interactive)
-  (set-window-buffer (ribbon-prev-window) (current-buffer)))
+  (set-window-buffer (ribbon-prev-window) (current-buffer))
+  (ribbon-select-left-window))
 
 (global-set-key (kbd "C-x r r") 'ribbon-mode-start)
 (global-set-key (kbd "C-x r <right>") 'ribbon-clone-buffer-to-right)
