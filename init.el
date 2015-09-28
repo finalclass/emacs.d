@@ -1,3 +1,12 @@
+                                        ;org-mode
+(setq org-replace-disputed-keys t)
+(eval-after-load "org"
+  '(progn
+     (define-key org-mode-map (kbd "<M-S-left>") nil)
+     (define-key org-mode-map (kbd "<M-S-right>") nil)
+     (define-key org-mode-map (kbd "<M-left>") nil)
+     (define-key org-mode-map (kbd "<M-right>") nil)))
+
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
 
@@ -425,7 +434,6 @@ If point was already at that position, move point to beginning of line."
 					;Moving between windows (S-<left> etc...)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
-(setq org-replace-disputed-keys t)
 
 					;kill whitespace
 (global-set-key (kbd "C-x j") 'kill-whitespace)
