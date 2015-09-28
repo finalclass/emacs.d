@@ -60,12 +60,27 @@
             (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
             ))
 
+
+(defun ribbon-selected-window-no ()
+  (position (selected-window) ribbon-windows))
+
+(defun ribbon-select-left-window ()
+  (let ((pos (ribbon-selected-window-no)))    
+    (if (< pos 2)
+        (select-window (nth (+ pos 1) ribbon-windows)))))
+
+(defun ribbon-select-right-window ()
+  (let ((pos (ribbon-selected-window-no)))
+    (if (> pos 0)
+        (select-window (nth (- pos 1) ribbon-windows)))))
+
 (defun ribbon-move-left ()
   (interactive)
   (ribbon-save-current-state)
   (setq ribbon-buffer-no (- ribbon-buffer-no 1))
   (ribbon-ensure-buffers-exist)
   (update-windows-buffers)
+  (ribbon-select-left-window)
   (ribbon-describe-buffers))
 
 (defun ribbon-move-right ()
@@ -74,6 +89,7 @@
   (setq ribbon-buffer-no (+ ribbon-buffer-no 1))
   (ribbon-ensure-buffers-exist)
   (update-windows-buffers)
+  (ribbon-select-right-window)
   (ribbon-describe-buffers))
 
 
