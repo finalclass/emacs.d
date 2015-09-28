@@ -70,14 +70,12 @@
   (nth (+ (ribbon-selected-window-no) 1) ribbon-windows))
 
 (defun ribbon-select-left-window ()
-  (let ((win (ribbon-prev-window)))
-    (if (win)
-        (select-window win))))
+  (if (ribbon-prev-window)
+      (select-window (ribbon-prev-window))))
   
 (defun ribbon-select-right-window ()
-  (let ((win (ribbon-next-window)))
-    (if (win)
-        (select-window win))))
+  (if (ribbon-next-window)
+      (select-window (ribbon-next-window))))
 
 (defun ribbon-move-left ()
   (interactive)
