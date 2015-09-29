@@ -1,4 +1,4 @@
-                                        ;org-mode
+                                        ;org-mode (for ribbon and windmove compatibility)
 (setq org-replace-disputed-keys t)
 (eval-after-load "org"
   '(progn
@@ -39,6 +39,15 @@
 
 (init--install-packages)
 
+                                        ;markdown (conf for ribbon compatibility)
+
+(add-hook
+ 'markdown-mode-hook
+ '(lambda ()
+    (substitute-key-definition 'markdown-promote-subtree 'nil markdown-mode-map)
+    (substitute-key-definition 'markdown-demote-subtree 'nil markdown-mode-map)))
+
+
                                         ;elisp
 ;;eval whole buffer and show message
 (defun sel-eval-buffer ()
@@ -52,6 +61,9 @@
 (setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
 
+
+                                        ;fp
+(require 'setup-fp)
 
                                         ;wc
 ;(require 'setup-wc)

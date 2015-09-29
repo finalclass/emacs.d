@@ -55,9 +55,9 @@
   
 (defun ribbon-describe-buffers ()
   (message (concat
-            (ribbon-describe-buffer (+ ribbon-buffer-no 0)) "   "
+            (ribbon-describe-buffer (+ ribbon-buffer-no 2)) "   "
             (ribbon-describe-buffer (+ ribbon-buffer-no 1)) "   "
-            (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
+            (ribbon-describe-buffer (+ ribbon-buffer-no 0))) "   "
             ))
 
 (defun ribbon-selected-window-no ()
