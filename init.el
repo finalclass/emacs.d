@@ -34,6 +34,7 @@
   (package-install 'flymake-coffee)
   (package-install 'jade-mode)
   (package-install 'markdown-mode)
+  (package-install 'fiplr)
   (package-install 'exec-path-from-shell)
   )
 
