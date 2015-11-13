@@ -2,8 +2,8 @@
 (setq org-replace-disputed-keys t)
 (eval-after-load "org"
   '(progn
-     (define-key org-mode-map (kbd "<M-S-left>") nil)
-     (define-key org-mode-map (kbd "<M-S-right>") nil)
+     ;;(define-key org-mode-map (kbd "<M-S-left>") nil)
+     ;;(define-key org-mode-map (kbd "<M-S-right>") nil)
      (define-key org-mode-map (kbd "<M-left>") nil)
      (define-key org-mode-map (kbd "<M-right>") nil)))
 
@@ -36,9 +36,14 @@
   (package-install 'markdown-mode)
   (package-install 'fiplr)
   (package-install 'exec-path-from-shell)
+  (package-install 'doremi)
+  (package-install 'tern)
   )
 
 (init--install-packages)
+
+(require 'setup-doremi)
+
 
                                         ;markdown (conf for ribbon compatibility)
 
@@ -195,6 +200,7 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 
                                         ;org-babel
+(setq org-src-fontify-natively t)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -204,9 +210,10 @@
    )
  )
 
-                                        ;coffee script linting
-(require 'flymake-coffee)
-(add-hook 'coffee-mode-hook 'flymake-coffee-load)
+                                        ;coffee script
+;;(require 'flymake-coffee)
+;;(add-hook 'coffee-mode-hook 'flymake-coffee-load)
+(custom-set-variables '(coffee-tab-width 4))
 
 					;server
 
@@ -293,16 +300,23 @@
    ("return" . ?←)
    ))
 
+(eval-after-load 'tern
+  '(setq tern-command (append tern-command '("--no-port-file"))))
+
+(defun delete-tern-process ()
+  (interactive)
+  (delete-process "Tern"))
+
 (global-prettify-symbols-mode +1)
-(add-hook 'js2-mode-hook (lambda () (hs-minor-mode +1)))
-(add-hook 'js2-mode-hook (lambda () (prettify-symbols-mode t)))
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (hs-minor-mode +1)
+            (prettify-symbols-mode t)
+            (auto-complete-mode t)
+            (tern-mode t)
+            (tern-ac-setup)))
 
 					;company
-(eval-after-load 'company 
-  '(add-to-list 'company-backends 'company-tern)
-  )
-
-					;restclient
 (eval-after-load 'company 
   '(add-to-list 'company-backends 'company-restclient))
 
@@ -411,13 +425,13 @@ If point was already at that position, move point to beginning of line."
 (global-set-key (kbd "M-<up>") `scroll-down-line)
 
 					;windows
-(global-set-key (kbd "C-x -") 'shrink-window-if-larger-than-buffer)
-(global-set-key (kbd "C-M-<down>") 'shrink-window)
-(global-set-key (kbd "C-x +") 'balance-windows)
-(global-set-key (kbd "C-M-<up>") 'enlarge-window)
-(global-set-key (kbd "C-x ^") 'enlarge-window)
-(global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
+;; (global-set-key (kbd "C-x -") 'shrink-window-if-larger-than-buffer)
+;; (global-set-key (kbd "C-M-<down>") 'shrink-window)
+;; (global-set-key (kbd "C-x +") 'balance-windows)
+;; (global-set-key (kbd "C-M-<up>") 'enlarge-window)
+;; (global-set-key (kbd "C-x ^") 'enlarge-window)
+;; (global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
 
 					;moving
 (global-set-key (kbd "C-<up>") (lambda () (interactive) (previous-line 5)))
