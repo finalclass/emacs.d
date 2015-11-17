@@ -1,7 +1,8 @@
 auto-save-list
 *-cache/
 eshell/
-elpa
+elpa/
+elpa-back/
 *.elc
 url
 .cask/
