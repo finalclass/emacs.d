@@ -5,6 +5,7 @@ elpa/
 elpa-back/
 games/
 backups/
+auto-save-list/
 *.elc
 url
 .cask/
