@@ -12,8 +12,7 @@
   (puthash 1 (window-buffer (nth 1 ribbon-windows)) ribbon-buffers-hash)
   
   (add-to-list 'ribbon-windows (next-window (next-window (selected-window))))
-  (puthash 2 (window-buffer (nth 2 ribbon-windows)) ribbon-buffers-hash)
-  )
+  (puthash 2 (window-buffer (nth 2 ribbon-windows)) ribbon-buffers-hash))
 
 (defun ribbon-save-current-state ()
   (puthash ribbon-buffer-no (window-buffer (nth 0 ribbon-windows)) ribbon-buffers-hash)
@@ -61,17 +60,30 @@
             (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
             ))
 
-(defun ribbon-clone-buffer ()
-  (interactive)
-  (set-window-buffer (next-window) (current-buffer))
-  (select-window (next-window)))
-   
+(defun ribbon-selected-window-no ()
+  (position (selected-window) ribbon-windows))
+
+(defun ribbon-next-window ()
+  (nth (- (ribbon-selected-window-no) 1) ribbon-windows))
+
+(defun ribbon-prev-window ()
+  (nth (+ (ribbon-selected-window-no) 1) ribbon-windows))
+
+(defun ribbon-select-left-window ()
+  (if (ribbon-prev-window)
+      (select-window (ribbon-prev-window))))
+  
+(defun ribbon-select-right-window ()
+  (if (ribbon-next-window)
+      (select-window (ribbon-next-window))))
+
 (defun ribbon-move-left ()
   (interactive)
   (ribbon-save-current-state)
   (setq ribbon-buffer-no (- ribbon-buffer-no 1))
   (ribbon-ensure-buffers-exist)
   (update-windows-buffers)
+  (ribbon-select-left-window)
   (ribbon-describe-buffers))
 
 (defun ribbon-move-right ()
@@ -80,9 +92,21 @@
   (setq ribbon-buffer-no (+ ribbon-buffer-no 1))
   (ribbon-ensure-buffers-exist)
   (update-windows-buffers)
+  (ribbon-select-right-window)
   (ribbon-describe-buffers))
 
+(defun ribbon-clone-buffer-to-right ()
+  (interactive)
+  (set-window-buffer (ribbon-next-window) (current-buffer))
+  (ribbon-select-right-window))
 
-(global-set-key (kbd "C-x r") 'ribbon-mode-start)
+(defun ribbon-clone-buffer-to-left ()
+  (interactive)
+  (set-window-buffer (ribbon-prev-window) (current-buffer))
+  (ribbon-select-left-window))
+
+(global-set-key (kbd "C-x r r") 'ribbon-mode-start)
+(global-set-key (kbd "C-x r <right>") 'ribbon-clone-buffer-to-right)
+(global-set-key (kbd "C-x r <left>") 'ribbon-clone-buffer-to-left)
 
 (provide 'setup-ribbon)
