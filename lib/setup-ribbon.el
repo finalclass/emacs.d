@@ -20,9 +20,10 @@
   (puthash (+ ribbon-buffer-no 2) (window-buffer (nth 2 ribbon-windows)) ribbon-buffers-hash))
 
 (defun ribbon-set-keyboard-shortcuts ()
-  (global-set-key (kbd "<S-M-right>") 'ribbon-move-right)
-  (global-set-key (kbd "<S-M-left>") 'ribbon-move-left)
-  (global-set-key (kbd "C-x t") 'ribbon-clone-buffer))
+  (global-set-key (kbd "<C-M-right>") 'ribbon-move-right)
+  (global-set-key (kbd "<C-M-left>") 'ribbon-move-left)
+  (global-set-key (kbd "C-x r <right>") 'ribbon-clone-buffer-to-right)
+  (global-set-key (kbd "C-x r <left>") 'ribbon-clone-buffer-to-left))
 
 (defun ribbon-split ()
   (split-window-right)
@@ -55,9 +56,9 @@
   
 (defun ribbon-describe-buffers ()
   (message (concat
-            (ribbon-describe-buffer (+ ribbon-buffer-no 0)) "   "
+            (ribbon-describe-buffer (+ ribbon-buffer-no 2)) "   "
             (ribbon-describe-buffer (+ ribbon-buffer-no 1)) "   "
-            (ribbon-describe-buffer (+ ribbon-buffer-no 2))) "   "
+            (ribbon-describe-buffer (+ ribbon-buffer-no 0))) "   "
             ))
 
 (defun ribbon-selected-window-no ()
@@ -106,7 +107,5 @@
   (ribbon-select-left-window))
 
 (global-set-key (kbd "C-x r r") 'ribbon-mode-start)
-(global-set-key (kbd "C-x r <right>") 'ribbon-clone-buffer-to-right)
-(global-set-key (kbd "C-x r <left>") 'ribbon-clone-buffer-to-left)
 
 (provide 'setup-ribbon)

@@ -1,11 +1,15 @@
 auto-save-list
 *-cache/
 eshell/
-elpa
+elpa/
+elpa-back/
+games/
+backups/
+auto-save-list/
 *.elc
 url
 .cask/
 .mc-lists.el
-games/
 .git/COMMIT_EDITMSG~
 ido.last
+ac-comphist.dat
