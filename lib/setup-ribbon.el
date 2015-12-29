@@ -12,8 +12,7 @@
   (puthash 1 (window-buffer (nth 1 ribbon-windows)) ribbon-buffers-hash)
   
   (add-to-list 'ribbon-windows (next-window (next-window (selected-window))))
-  (puthash 2 (window-buffer (nth 2 ribbon-windows)) ribbon-buffers-hash)
-  )
+  (puthash 2 (window-buffer (nth 2 ribbon-windows)) ribbon-buffers-hash))
 
 (defun ribbon-save-current-state ()
   (puthash ribbon-buffer-no (window-buffer (nth 0 ribbon-windows)) ribbon-buffers-hash)
