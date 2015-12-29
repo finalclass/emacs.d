@@ -11,7 +11,7 @@
 (setq inhibit-startup-message t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq transient-mark-mode t)
-(setq visible-bell t)
+(setq visible-bell nil)
 (show-paren-mode t)
 (pending-delete-mode t)
 (setq ns-alternate-modifier 'meta)

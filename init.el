@@ -1,3 +1,4 @@
+
 (setq lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path lib-dir)
 
@@ -18,7 +19,7 @@
 (require 'setup-typescript)
 (require 'setup-magit)
 (require 'setup-coffeescript)
-(require 'setup-server)
+;; (require 'setup-server)
 (require 'setup-window-configuration-registry)
 (require 'setup-paredit)
 (require 'setup-indent-after-yanking)
@@ -43,3 +44,15 @@
 (require 'setup-folding)
 (require 'setup-smartparens)
 (require 'setup-jade)
+(require 'strings)
+(require 'editor-keyboard-shortcuts)
+
+(defun prelude-google ()
+  "Googles a query or region if any."
+  (interactive)
+  (browse-url
+   (concat
+    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+    (if mark-active
+        (buffer-substring (region-beginning) (region-end))
+      (read-string "Google: ")))))

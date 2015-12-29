@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Bootstrap input
+# key: bsinput
+# --
+<div class="control-group">
+     <label class="control-label" for="${1:id}">${2:name}</label>
+     <div class="conrtols">
+          <textarea id="$1"
+                    msd-elastic
+                    ng-model="${3:model}"
+                    rows="1"></textarea>
+     </div>
+ </div>$0
