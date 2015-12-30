@@ -13,4 +13,9 @@
   (mydired-sort))
 
 
+(setq dired-dwim-target t)
+(setq dired-details-propagate-flag t)
+
+(require 'dired+)
+
 (provide 'setup-dired)

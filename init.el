@@ -57,7 +57,6 @@
         (buffer-substring (region-beginning) (region-end))
       (read-string "Google: ")))))
 
-
 ; TAB autocomplete after indent
 (setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
