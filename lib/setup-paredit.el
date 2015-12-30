@@ -1,3 +1,5 @@
+(package-install 'paredit)
+
 (defun my-paredit-nonlisp ()
   "Turn on paredit mode for non-lisps."
   (interactive)

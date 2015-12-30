@@ -13,3 +13,5 @@ url
 .git/COMMIT_EDITMSG~
 ido.last
 ac-comphist.dat
+projects.el
+bookmarks
