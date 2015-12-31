@@ -21,5 +21,7 @@
                                         ;menubar
 (menu-bar-mode -1)
 
+                                        ;mode-line colors
+ 
 
 (provide 'setup-gui)
