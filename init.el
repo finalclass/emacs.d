@@ -6,7 +6,7 @@
 (require 'setup-doremi)
 (require 'setup-markdown)
 (require 'setup-elisp)
-(require 'setup-fp)
+(require 'setup-fc-bin)
 (require 'setup-mac)
 (require 'setup-winner)
 (require 'setup-html)
@@ -90,3 +90,64 @@
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:background "#a9b7c6" :foreground "#3c3f41" :inverse-video t :box nil :underline t :slant normal :weight normal))))
  '(mode-line-inactive ((t (:inherit mode-line :background "#a9b7c5" :foreground "#3c3f41" :inverse-video t :box nil :underline nil :slant normal :weight normal)))))
+
+(defadvice pop-to-buffer (before cancel-other-window first)
+  (ad-set-arg 1 nil))
+
+(ad-activate 'pop-to-buffer)
+
+;; Toggle window dedication
+(defun toggle-window-dedicated ()
+  "Toggle whether the current active window is dedicated or not"
+  (interactive)
+  (message
+   (if (let (window (get-buffer-window (current-buffer)))
+         (set-window-dedicated-p window 
+                                 (not (window-dedicated-p window))))
+       "Window '%s' is dedicated"
+     "Window '%s' is normal")
+   (current-buffer)))
+
+;; Press [pause] key in each window you want to "freeze"
+(global-set-key (kbd "C-c C-l") 'toggle-window-dedicated)
+
+(global-unset-key (kbd "C-q"))
+
+(defun camel-case-to-dash-case ()
+  "Toggle between camcelcase and underscore notation for the symbol at point."
+  (interactive)
+  (save-excursion
+    (let* ((bounds (bounds-of-thing-at-point 'symbol))
+           (start (car bounds))
+           (end (cdr bounds))
+           (currently-using-underscores-p (progn (goto-char start)
+                                                 (re-search-forward "_" end t))))
+      (if currently-using-underscores-p
+          (progn
+            (upcase-initials-region start end)
+            (replace-string "_" "" nil start end)
+            (downcase-region start (1+ start)))
+        (replace-regexp "\\([A-Z]\\)" "-\\1" nil (1+ start) end)
+        (downcase-region start end)))))
+
+(global-set-key (kbd "C-q C-d")  'camel-case-to-dash-case)
+
+
+;Kill the process in "list-processes"
+
+(define-key process-menu-mode-map (kbd "C-k") 'joaot/delete-process-at-point)
+
+(defun joaot/delete-process-at-point ()
+  (interactive)
+  (let ((process (get-text-property (point) 'tabulated-list-id)))
+    (cond ((and process
+                (processp process))
+           (delete-process process)
+           (revert-buffer))
+          (t
+           (error "no process at point!")))))
+
+
+                                        ;saved macros
+(fset 'dash-to-camel-case
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([19 45 return 67108896 right 24 21 left backspace] 0 "%d")) arg)))

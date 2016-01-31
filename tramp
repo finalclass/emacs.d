@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <15/08/30 16:16:49 /home/sel/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <16/01/27 11:18:04 /Users/sel/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -9,18 +9,15 @@
   ("remote-path"
    ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("~" "/home/sel")
+  ("stat" "\\stat")
   ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-string" "sel")
   ("ls" "/bin/ls --color=never")
   ("ls-dired" t)
-  ("stat" "\\stat")
-  ("id" "/usr/bin/id")
   ("gid-integer" 1000)
-  ("readlink" "\\readlink")
-  ("gid-string" "sel")
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("git" "\\git"))
- (["scp" nil "scp" nil nil]
+  ("perl" "\\perl"))
+ (["ssh" "sel" "finalclass.net" nil nil]
   nil))
