@@ -13,7 +13,7 @@
     (message command)
     (shell-command command "*Messages*" "*Messages*")))
 
-(global-set-key (kbd "C-c C-b") 'fc-deploy)
+(global-set-key (kbd "C-c C-x C-x") 'fc-deploy)
 
 (defun fc-deploy-cloud ()
   (interactive)
@@ -21,7 +21,7 @@
     (message command)
     (shell-command command "*Messages*" "*Messages*")))
 
-(global-set-key (kbd "C-c C-x b") 'fc-deploy-cloud)
+(global-set-key (kbd "C-c C-x C-c") 'fc-deploy-cloud)
 
 (defun fc-ip ()
   (interactive)
