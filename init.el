@@ -102,7 +102,7 @@
   (interactive)
   (message
    (if (let (window (get-buffer-window (current-buffer)))
-         (set-window-dedicated-p window 
+         (set-window-dedicated-p window
                                  (not (window-dedicated-p window))))
        "Window '%s' is dedicated"
      "Window '%s' is normal")
@@ -166,3 +166,7 @@
 
 (when window-system
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
+
+
+(add-hook 'before-save-hook 'whitespace-cleanup)
+(setq-default show-trailing-whitespace t)
