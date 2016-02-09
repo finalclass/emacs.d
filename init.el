@@ -153,6 +153,16 @@
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([19 45 return 67108896 right 24 21 left backspace] 0 "%d")) arg)))
 
 
+(defun my-paredit-nonlisp ()
+  "Turn on paredit mode for non-lisps."
+  (interactive)
+  (set (make-local-variable 'paredit-space-for-delimiter-predicates)
+       '((lambda (endp delimiter) nil)))
+  (paredit-mode 1))
+
+(add-hook 'js-mode-hook 'my-paredit-nonlisp)
+
+
                                         ;prompt before closing
 
 (defun ask-before-closing ()
