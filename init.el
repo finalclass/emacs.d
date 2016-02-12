@@ -73,6 +73,9 @@
  ;; If there is more than one, they won't work right.
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(coffee-tab-width 4)
+ '(custom-safe-themes
+   (quote
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "b04425cc726711a6c91e8ebc20cf5a3927160681941e06bc7900a5a5bfe1a77f" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
  '(js2-auto-indent-p t)
  '(js2-consistent-level-indent-inner-bracket t)
  '(js2-enter-indents-newline t)
@@ -83,13 +86,6 @@
  '(js2-strict-trailing-comma-warning nil)
  '(mode-line-in-non-selected-windows t)
  '(org-agenda-files (quote ("~/todo-home.org"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(mode-line ((t (:background "#a9b7c6" :foreground "#3c3f41" :inverse-video t :box nil :underline t :slant normal :weight normal))))
- '(mode-line-inactive ((t (:inherit mode-line :background "#a9b7c5" :foreground "#3c3f41" :inverse-video t :box nil :underline nil :slant normal :weight normal)))))
 
 (defadvice pop-to-buffer (before cancel-other-window first)
   (ad-set-arg 1 nil))
@@ -153,14 +149,14 @@
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([19 45 return 67108896 right 24 21 left backspace] 0 "%d")) arg)))
 
 
-(defun my-paredit-nonlisp ()
-  "Turn on paredit mode for non-lisps."
-  (interactive)
-  (set (make-local-variable 'paredit-space-for-delimiter-predicates)
-       '((lambda (endp delimiter) nil)))
-  (paredit-mode 1))
+;; (defun my-paredit-nonlisp ()
+  ;; "Turn on paredit mode for non-lisps."
+  ;; (interactive)
+  ;; (set (make-local-variable 'paredit-space-for-delimiter-predicates)
+       ;; '((lambda (endp delimiter) nil)))
+  ;; (paredit-mode 1))
 
-(add-hook 'js-mode-hook 'my-paredit-nonlisp)
+;; (add-hook 'js-mode-hook 'my-paredit-nonlisp)
 
 
                                         ;prompt before closing
@@ -177,6 +173,17 @@
 (when window-system
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
 
-
-(add-hook 'before-save-hook 'whitespace-cleanup)
 (setq-default show-trailing-whitespace t)
+(global-set-key (kbd "C-c C-x C-w") 'delete-trailing-whitespace)
+
+                                        ;smart-mode-line
+(smart-mode-line-enable)
+(setq sml/no-confirm-load-theme t)
+(sml/apply-theme 'powerline)
+(sml/setup)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(trailing-whitespace ((t (:background "gray99" :foreground "gray24" :inverse-video t :underline nil :slant normal :weight normal)))))

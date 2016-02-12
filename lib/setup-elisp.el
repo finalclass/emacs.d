@@ -5,7 +5,7 @@
   (eval-buffer)
   (message "Buffer evaluated"))
 
-(global-set-key (kbd "C-b") 'sel-eval-buffer)
+;; (global-set-key (kbd "C-b") 'sel-eval-buffer)
 
 ;;autocomplete
 ;;(setq tab-always-indent 'complete)
