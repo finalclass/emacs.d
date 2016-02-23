@@ -1,4 +1,3 @@
-(global-set-key (kbd "C-M-<return>") 'hs-toggle-hiding)
-
+(global-set-key (kbd "C--") 'hs-toggle-hiding)
 
 (provide 'setup-folding)
