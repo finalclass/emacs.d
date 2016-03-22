@@ -204,3 +204,17 @@
 
 (with-eval-after-load 'go-mode
   (require 'go-autocomplete))
+
+                                        ;eproject
+(global-set-key (kbd "C-c C-x C-s") 'eproject-grep)
+
+;; (define-project-type git-project (generic)
+;;   (look-for ".git")
+;;   ;;:relevant-files ("\\.js$" "\\.ts$" "\\.coffee$")
+;;   :irrelevant-files ("node_modules/"))
+
+
+(global-auto-revert-mode t)
+
+(global-set-key (kbd "C-c m c") 'coffee-mode)
+(global-set-key (kbd "C-c m w") 'web-mode)
