@@ -1,6 +1,7 @@
 (setq lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path lib-dir)
 
+(require 'nix-mode)
 (require 'setup-package)
 (require 'setup-org)
 (require 'setup-doremi)
