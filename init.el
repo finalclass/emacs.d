@@ -47,6 +47,7 @@
 (require 'strings)
 (require 'editor-keyboard-shortcuts)
 (require 'setup-kbd-projects)
+(require 'grep-in-project)
 
 (defun prelude-google ()
   "Googles a query or region if any."
@@ -205,9 +206,6 @@
 
 (with-eval-after-load 'go-mode
   (require 'go-autocomplete))
-
-                                        ;eproject
-(global-set-key (kbd "C-c C-x C-s") 'eproject-grep)
 
 ;; (define-project-type git-project (generic)
 ;;   (look-for ".git")
